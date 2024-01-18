@@ -1,0 +1,130 @@
+body {
+    font-family: "inter", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic UI", "Yu Gothic", "Meiryo", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'inter', sans-serif;
+}
+
+p {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin-bottom: 0;
+}
+
+.btn {
+    border-radius: 2px;
+}
+
+.btn-small {
+    border-radius: 1px;
+}
+
+.btn-large {
+    border-radius: 3px;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+nav {
+    background: white;
+}
+
+.sepn {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.card a {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0 !important;
+    ;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.card img {
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    zoom: 120%;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    margin: 0 0 0.6rem 0;
+    font-size: 1.65rem;
+    letter-spacing: 0.0825rem;
+    font-weight: 600;
+}
+
+.small {
+    font-size: 1.6rem;
+    letter-spacing: 0.082rem;
+}
+
+.no_image {
+    background-color: #F2F2F2;
+
+}
+
+.card-text {
+    font-size: 0.75rem;
+    letter-spacing: 0.08rem;
+    line-height: 1.8;
+}
+
+rt {
+    text-align: center;
+    line-height: 1.5;
+    font-weight: 500;
+    font-size: 0.4em;
+    letter-spacing: 0.15rem;
+}
+
+.map-parent {
+    position: relative;
+}
+
+.map {
+    position: absolute;
+    top: -4.5rem;
+    height: calc(100% + 4.5rem);
+    width: 100%;
+}
+
+@media screen and (max-width:991px) {
+    .map {
+        position: static;
+        height: 100%;
+        margin-top: 7vw;
+    }
+}
+
+.map iframe {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+}

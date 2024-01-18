@@ -1,0 +1,82 @@
+#G,
+#Y,
+#P {
+    opacity: 0.65;
+}
+
+#G {
+    width: 65px;
+    position: absolute;
+    top: -24px;
+    left: -42px;
+    z-index: -2;
+}
+
+#Y {
+    width: 30px;
+    position: absolute;
+    top: 32px;
+    left: -20px;
+    z-index: -3;
+}
+
+#P {
+    width: 53px;
+    position: absolute;
+    right: 10px;
+    bottom: -17px;
+    z-index: -2;
+}
+
+#stamp {
+    width: 130px;
+    opacity: 0.6;
+    position: absolute;
+    transform: translate(-50%, -30%)rotate(13deg);
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    height: 1rem;
+    width: 1rem;
+}
+
+.detail h1,
+.detail h6,
+.detail rt {
+    font-family: "Shippori Mincho B1", serif;
+}
+
+.detail h1,
+.detail h6 {
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+.detail p {
+    font-family: "Noto Serif JP";
+    letter-spacing: 2px;
+    line-height: 2;
+}
+
+#kounoyu {
+    background-image: url(../img/spots/toyooka/kinosakionsen/kounoyu2.jpg);
+    background-position-y: center;
+    background-size: cover;
+}
+
+#mandarayu {
+    background-image: url(../img/spots/toyooka/kinosakionsen/mandarayu2.jpg);
+    background-position-y: center;
+    background-size: cover;
+}
+
+.detail {
+    height: 100%;
+    color: white;
+}
+
+.about {
+    text-align: center;
+    width: 100%;
+}

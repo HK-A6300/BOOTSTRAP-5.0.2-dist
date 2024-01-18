@@ -1,0 +1,912 @@
+p {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin-bottom: 0;
+}
+
+body {
+    font-family: "Cinzel", "Inter", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic UI", "Yu Gothic", "Meiryo", sans-serif;
+}
+
+.cov-padding {
+    padding: 0 6.25vw;
+}
+
+.btn {
+    border-radius: 2px;
+}
+
+.btn-small {
+    border-radius: 1px;
+}
+
+.btn-large {
+    border-radius: 3px;
+}
+
+.white {
+    color: white;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.intro-video {
+    color: #FFF;
+    position: relative;
+    height: 100vh;
+}
+
+.video-area {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.intro-video video {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 177.77777778vh;
+    /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+    height: 56.25vw;
+    /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+    min-height: 100%;
+    min-width: 100%;
+
+    filter: brightness(85%);
+    filter: saturate(90%);
+}
+
+/*.intro-video .element{
+    width:20%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+.intro-video img{
+    width:100%;
+    height:auto;
+}
+
+.intro-video .element h1{
+    font-size:22px;
+    font-family:"Shippori Mincho B1",serif;
+    letter-spacing:5px;
+    text-align:center;
+    color:white;
+    -moz-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    -webkit-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    -ms-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}*/
+
+.intro-video ul {
+    display: none;
+    z-index: 2;
+    width: 100%;
+}
+
+.nav-element {
+    clear: both;
+}
+
+.nav-element-content {
+    width: 100%;
+    cursor: pointer;
+    text-align: right;
+    margin-bottom: clamp(40px, 4vw, 73px);
+}
+
+#nav-element-end {
+    width: 100%;
+    cursor: pointer;
+    text-align: right;
+}
+
+.nav-element>div>div {
+    width: 145px;
+    height: 1px;
+    background-color: #FFF;
+}
+
+.nav-element>div h1 {
+    margin: 0 20px 5px 0;
+    letter-spacing: 6px;
+    font-size: 28px;
+}
+
+.nav-element>div p {
+    margin: 3px 23px 0 0;
+    letter-spacing: 0px;
+    font-family: "Shippori Mincho B1", serif;
+}
+
+
+
+.element-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: clamp(26px, 3.7vw, 10000px);
+    height: 100vh;
+    width: 100%;
+}
+
+.element-div>div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#montserrat {
+    font-size: 77px;
+    letter-spacing: 1px;
+    line-height: 75px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    -moz-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    -webkit-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    -ms-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    font-feature-settings: "palt";
+}
+
+.element-div h1 span {
+    display: inline-block;
+    margin: 0 0 15px 0;
+}
+
+.element-div img {
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+}
+
+.span-container,
+.checkbox {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.checkbox {
+    opacity: 0 !important;
+    z-index: 100;
+}
+
+.span-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    z-index: 90;
+}
+
+.span-container span {
+    width: 100%;
+    height: 3px;
+    background: white;
+    transition: all 250ms ease-out;
+    transform-origin: 0 0;
+}
+
+.checkbox:checked~.span-container span:nth-last-child(1) {
+    transform: rotate(-45deg) translate(-1px, 0px);
+}
+
+.checkbox:checked~.span-container span:nth-last-child(2) {
+    transform: rotate(0deg) scale(0.2, 0.2);
+    opacity: 0 !important;
+}
+
+.checkbox:checked~.span-container span:nth-last-child(3) {
+    transform: rotate(45deg) translate(0px, -1px);
+}
+
+.nav-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 250ms ease-out;
+    opacity: 0;
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: white;
+    font-size: clamp(1.2rem, 1.2vw, 2.0rem);
+    margin: 1.5rem auto;
+    position: relative;
+
+}
+
+.nav-container a:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 3px;
+    background: #ffffff;
+    transform: scale(0, 1);
+    transition: 0.4s;
+}
+
+.nav-container a:hover:before {
+    transform: scale(1);
+}
+
+.checkbox:checked~.nav-container {
+    opacity: 1;
+}
+
+.fluid-olex {
+    padding: 6vw 6.2vw !important;
+}
+
+@media screen and (max-width: 991px) {
+    .fluid-olex {
+        padding: 12vw 12.4vw !important;
+    }
+}
+
+#intro {
+    background-image: url(../img/japanese-paper-00479.jpg);
+}
+
+#intro h2 {
+    font-family: "Cinzel", serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+/*@media screen and (max-width: 991px){
+    #intro .row>div{
+        text-align:center;
+    }
+}*/
+#intro h1 {
+    font-size: 35px;
+    letter-spacing: 10px;
+    line-height: 50px;
+    font-weight: 500;
+    font-family: "Shippori Mincho B1", serif;
+}
+
+#intro p {
+    font-size: 15px;
+    letter-spacing: 4px;
+    line-height: 37px;
+}
+
+#intro img {
+    margin: 0 auto;
+    display: block;
+    opacity: 0;
+}
+
+#intro h2.lg-x {
+    font-family: "Cinzel", serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+#intro h1.lg-x {
+    font-size: 40px;
+    letter-spacing: 10px;
+    line-height: 60px;
+    font-weight: 500;
+    margin: 20px 0 20px 0;
+    font-family: "Shippori Mincho B1", serif;
+}
+
+@media screen and (max-width: 1399px) {
+    .xxl {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .xxl-x {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .xl {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .xl-x {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .lg {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .lg-x {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .md {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .md-x {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .sm {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .sm-x {
+        display: none !important;
+    }
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2023-10-31 22:15:20
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation fade-in
+ * ----------------------------------------
+ */
+.fade-in {
+    -webkit-animation: fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#pickup {
+    background-color: #FFFFFF;
+}
+
+
+#areas {
+    background-color: #FFFFFF;
+    height: auto;
+}
+
+.caption {
+    display: block;
+    text-align: center;
+}
+
+.caption h1 {
+    display: block !important;
+    font-size: 32px !important;
+    letter-spacing: 3px !important;
+    font-family: "Shippori Mincho B1", serif !important;
+    font-weight: 500 !important;
+    margin: 13px 0 30px 0 !important;
+}
+
+.caption h2 {
+    display: block !important;
+    font-size: 15px !important;
+    letter-spacing: 4px !important;
+    font-family: "Cinzel", serif !important;
+}
+
+.caption div {
+    display: inline-block !important;
+    width: 70px !important;
+    height: 1px !important;
+    background-color: #212529 !important;
+    margin: 0 0 25px 0 !important;
+}
+
+
+/*common styles*/
+#areas .left-align,
+#areas .right-align {
+    position: relative;
+    margin-bottom: 250px;
+    text-align: center;
+}
+
+#areas .variable-position {
+    text-align: start;
+    display: inline-block;
+    max-width: 90%;
+    /*960px*/
+    width: 100%;
+    position: relative;
+}
+
+#areas h1 {
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 600;
+    font-size: 120px;
+}
+
+#areas h2 {
+    display: inline-block;
+    font-family: "Bad Script", serif;
+    font-size: 45px;
+}
+
+#areas p {
+    font-family: "Shippori Mincho B1", serif;
+}
+
+#areas .explanation {
+    font-family: "Noto Serif JP", serif;
+    background-color: #FFFFFF;
+    padding: 25px;
+    font-size: 14px;
+    line-height: 30px;
+    letter-spacing: 2px;
+}
+
+#areas img {
+    width: 100%;
+}
+
+#areas .variable-position .go-button {
+    position: absolute;
+    top: calc(100% + 85px);
+    width: 200px;
+    height: 50px;
+    background-color: #212529;
+    transition: 0.2s;
+    color: inherit;
+    text-decoration: none;
+}
+
+#areas .variable-position .go-button:hover {
+    background-color: #FFFFFF;
+    transition: 0.2s;
+}
+
+#areas .variable-position .go-button>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#areas .variable-position .go-button p {
+    display: block;
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 8px;
+    letter-spacing: 2px;
+    color: #FFF;
+    mix-blend-mode: exclusion;
+}
+
+#areas .variable-position .go-button img {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    filter: invert(100%);
+    mix-blend-mode: exclusion;
+}
+
+#areas .variable-position .go-button a {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1.6px solid #212529;
+}
+
+/*left-align styles*/
+#areas .left-align h1 {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translate(0, -100%)translate(0, 90px);
+}
+
+#areas .left-align h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+    transform-origin: left top;
+    transform: rotate(-90deg)translate(-100%, -79%);
+}
+
+#areas .variable-position .vertical-left {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    writing-mode: vertical-rl;
+}
+
+#areas .variable-position .vertical-left span {
+    display: inline-block;
+    padding: 15px 10px;
+    margin: 0 10px;
+    font-size: 24px;
+    letter-spacing: 6px;
+    background-color: #FFFFFF;
+}
+
+#areas .variable-position .horizontal-left {
+    display: flex;
+    position: absolute;
+    width: 45%;
+    bottom: -135px;
+    right: -50px;
+    text-align: end;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#areas .variable-position .horizontal-left span {
+    display: inline-block;
+    padding: 10px 10px 10px 19px;
+    margin: 10px;
+    transform: translate(0, -10px);
+    font-size: 24px;
+    letter-spacing: 6px;
+    background-color: #FFFFFF;
+}
+
+#areas .left-align .variable-position .explanation {
+    position: absolute;
+    width: 45%;
+    bottom: -85px;
+    right: -50px;
+    text-align: left;
+}
+
+#areas .left-align .variable-position .horizontal-left .explanation {
+    position: static;
+    width: 100%;
+}
+
+#areas .left-align .variable-position .go-button {
+    right: -50px;
+}
+
+#areas .variable-position .horizontal-left .go-button {
+    position: relative;
+    right: 0;
+}
+
+
+/*right-align styles*/
+#areas .right-align h1 {
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    transform: translate(-100%, -100%)translate(0, 90px);
+    white-space: nowrap;
+}
+
+#areas .right-align h2 {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+    transform-origin: left top;
+    transform: rotate(90deg)translate(0, -80%);
+}
+
+#areas .variable-position .vertical-right {
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    writing-mode: vertical-rl;
+}
+
+#areas .variable-position .vertical-right span {
+    display: inline-block;
+    padding: 15px 10px;
+    margin: 0 10px;
+    font-size: 24px;
+    letter-spacing: 6px;
+    background-color: #FFFFFF;
+}
+
+#areas .variable-position .horizontal-right {
+    display: flex;
+    position: absolute;
+    bottom: -135px;
+    left: -50px;
+    align-items: flex-start;
+    width: 45%;
+    flex-direction: column;
+}
+
+#areas .variable-position .horizontal-right span {
+    display: inline-block;
+    padding: 10px 13px 10px 10px;
+    margin: 10px;
+    transform: translate(0, -10px);
+    font-size: 24px;
+    letter-spacing: 6px;
+    background-color: #FFFFFF;
+}
+
+#areas .right-align .variable-position .explanation {
+    position: absolute;
+    width: 45%;
+    bottom: -85px;
+    left: -50px;
+}
+
+#areas .right-align .variable-position .horizontal-right .explanation {
+    position: static;
+    width: 100%;
+}
+
+#areas .right-align .variable-position .go-button {
+    left: -50px;
+}
+
+#areas .variable-position .horizontal-right .go-button {
+    position: relative;
+    left: 0;
+}
+
+@media screen and (min-width: 992px) {
+    #areas .variable-position br:not(.vertical-right br) {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #areas h1:not(.caption h1) {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        transform: translateY(-77%) !important;
+        font-size: clamp(60px,11vw,100px);
+    }
+
+    #areas h2:not(.caption h2) {
+        display: none !important;
+    }
+
+    #areas .explanation {
+        padding: 0px !important;
+        font-size: 14px !important;
+        line-height: 30px !important;
+        letter-spacing: 2px !important;
+    }
+    #areas .variable-position {
+        max-width: 100%;
+    }
+    #areas .variable-position p:not(.go-button p) {
+        position: static !important;
+        writing-mode: horizontal-tb !important;
+        text-align: center !important;
+        width: initial !important;
+        margin-top: 5%;
+        transition: 0.2s;
+    }
+
+    #areas .variable-position span {
+        display: initial !important;
+        padding: initial !important;
+        margin: initial !important;
+        font-size: 24px !important;
+        letter-spacing: 6px !important;
+        background-color: initial !important;
+    }
+
+    #areas .variable-position .go-button {
+        left: initial !important;
+        right: initial !important;
+        position: relative !important;
+        width: 200px !important;
+        height: 50px !important;
+        margin: 5% auto 0 auto;
+    }
+
+    #areas .variable-position .horizontal-left,
+    #areas .variable-position .horizontal-right {
+        display: initial !important;
+        position: initial !important;
+        width: initial !important;
+        bottom: initial !important;
+        right: initial !important;
+        text-align: initial !important;
+        flex-direction: initial !important;
+        align-items: initial !important;
+    }
+}
+@media  screen and (max-width:1199px) and (min-width:992px){
+    #areas .variable-position .horizontal-left{
+        width: 50%!important;
+    }
+}
+
+
+/*for animation*/
+.toyooka,
+.yabu,
+.shinonsen,
+.asago,
+.kami {
+    opacity: 0;
+}
+
+/*regions-color styles*/
+.toyooka>div h2,
+.toyooka h1 {
+    color: #095BAD;
+}
+
+.asago>div h2,
+.asago h1 {
+    color: #D47444;
+}
+
+.yabu>div h2,
+.yabu h1 {
+    color: #009E96;
+}
+
+.kami>div h2,
+.kami h1 {
+    color: #D45D57;
+}
+
+.shinonsen>div h2,
+.shinonsen h1 {
+    color: #309C56;
+}
+
+footer p {
+    display: block;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 1.7;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    font-family: "Noto Serif JP", serif;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2023-10-31 20:59:36
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation fade-in-right
+ * ----------------------------------------
+ */
+.fade-in-right {
+    -webkit-animation: fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes fade-in-right {
+    0% {
+        right: -70px;
+        opacity: 0;
+    }
+
+    100% {
+        right: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-right {
+    0% {
+        right: -70px;
+        opacity: 0;
+    }
+
+    100% {
+        right: 0;
+        opacity: 1;
+    }
+}
+
+/**
+ * ----------------------------------------
+ * animation fade-in-left
+ * ----------------------------------------
+ */
+.fade-in-left {
+    -webkit-animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes fade-in-left {
+    0% {
+        left: -70px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-left {
+    0% {
+        left: -70px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
