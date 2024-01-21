@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Shippori+Mincho+B1:wght@400;500;600;700&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Shippori+Mincho+B1:wght@400;500;600;700&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,600;0,700;0,800;0,900&display=swap"
     rel="stylesheet">
   <title>香住漁港</title>
 </head>
@@ -110,45 +110,56 @@
   <div class="container mt-5">
     <div class="row gx-5 gy-5">
       <div class="col-lg-6">
-        <img src="../img/spots/toyooka/ichigyo-ichie/DSC02102.jpg">
+        <div id="i" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+              <img src="../img/spots/kami/kasumi-fishing-port/i1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <img src="../img/spots/kami/kasumi-fishing-port/i2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <img src="../img/spots/kami/kasumi-fishing-port/i3.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#i" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#i" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
       </div>
       <div class="col-lg-6 d-flex flex-column justify-content-center">
-        <div>
+        <div class="position-relative">
           <h5 class="modern-M mb-2" style="transform:translate(0.5%,0%);">
             海鮮料理だけじゃない！
           </h5>
           <h1 class="modern-L" style="line-height:1.7; position:relative;">
-            <span class="position-relative" style="-webkit-text-stroke: #212529 2px;">但馬の「うまいもん」</span><br>が食べられる！<br>
-            <span class="position-absolute" style="top: 0; left: 0; color: rgb(252, 188, 69); white-space: nowrap;">但馬の「うまいもん」</span>
-            <span class="position-absolute" style="top: 1px; left: 1px; -webkit-text-stroke: #212529 1.5px; white-space: nowrap; z-index: -1;">但馬の「うまいもん」</span>
+            <span class="position-relative"
+              style="white-space: nowrap; -webkit-text-stroke: #212529 2px;">「香住松葉がにまつり」</span><br>
+            <span class="position-absolute"
+              style="white-space: nowrap; top: 0; left: 0; color: #EF845C; white-space: nowrap;">「香住松葉がにまつり」</span>
+            <span class="position-absolute"
+              style="white-space: nowrap; top: 1.5px; left: 1.5px; -webkit-text-stroke: #212529 1.5px; white-space: nowrap; z-index: -1;">「香住松葉がにまつり」</span>
           </h1>
+          <img class="position-absolute"
+            style="bottom:0; right: 0; width: 30%; opacity: 0.3; transform: rotate(10deg); z-index: -1;"
+            src="../img/spots/kami/kasumi-fishing-port/Mask group.png" alt="">
+          <p class="modern-S mb-4 mt-4">
+            「香住漁港」は海に面している香美町の漁港です。この漁港では毎年11月中頃に「香住松葉がにまつり」というイベントが開催され、ちくわまき大会、海産物素人セリ市、大じゃんけん大会など、多数の参加型イベントが開催されます。
+          </p>
         </div>
-        <p class="modern-S mb-4 mt-4">
-          「香住漁港」は、新鮮な魚介類を使用した刺し身や海鮮丼などの海鮮料理から、但馬牛のステーキや丼ものなどの幅広い料理を提供しているお店です。
-          「香住漁港」は城崎温泉駅の眼の前にある一本道続きにあるのでアクセスも良いです。
-        </p>
-        <h5 class="mdoern-enX mb-2 modern-M" style="font-weight: 600;">Point</h5>
-        <div class="row gx-2">
-          <div class="col-lg-1 col-2">
-            <img src="../img/spots/toyooka/ichigyo-ichie/01.png" alt="">
-          </div>
-          <div class="col-lg-11 col-10 position-relative">
-            <p class="modern-S position-absolute ms-2" style="top:50%; transform:translateY(-50%); line-height:1.4">
-              海鮮料理にしては値段がとてもお手頃で<span style="border-bottom:solid 2px rgb(252, 188, 69) ; font-size: 1.4em;">お財布に優しい！</span>
-            <p>
-          </div>
+        <div class="d-flex mb-3 align-items-center">
+          <img src="../img/icon/activity.svg" style="width: 45px;" alt="">
+          <h4 class="modern-M ms-3" style="font-weight: 600;">プログラム紹介</h4>
         </div>
-        <div class="mt-3 xl-x"></div>
-        <div class="row gx-2 mt-3">
-          <div class="col-lg-1 col-2">
-            <img src="../img/spots/toyooka/ichigyo-ichie/02.png" alt="">
-          </div>
-          <div class="col-lg-11 col-10 position-relative">
-            <p class="modern-S position-absolute ms-2" style="top:50%; transform:translateY(-50%); line-height:1.4">
-              提供されている海鮮料理が、刺し身からウニ、海鮮丼と<span style="border-bottom:solid 2px orange ; font-size: 1.4em;">種類豊富！</span>
-            <p>
-          </div>
-        </div>
+        <div class="w-100" style="background-color: #212529; height: 1px;"></div>
+        <h3 class="mt-3" style="line-height: 1;">
+          <span class="modern-enX">01.</span>&ensp;<span class="modern-M fw-bold">セコがに綺麗に食べよう大会</span>
+        </h3>
       </div>
       <div class="col-12"></div>
       <div class="col-xl-6 mb-5">
