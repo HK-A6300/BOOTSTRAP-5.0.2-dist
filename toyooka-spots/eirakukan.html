@@ -44,6 +44,24 @@
       height: 1px;
       margin: 0 0 25px 0;
     }
+    #responsive {
+      color: white;
+    }
+
+    @media screen and (min-width: 992px) {
+      #responsive {
+        writing-mode: vertical-rl;
+        position: absolute;
+        top: 6%;
+        right: 4%;
+      }
+    }
+
+    @media screen and (max-width: 991px) {
+      #responsive {
+        margin-bottom: 2.5rem;
+      }
+    }
   </style>
 </head>
 
@@ -126,8 +144,21 @@
           </div>
         </div>
         <div class="row pb-5">
-          <div class="col-12">
-            <img src="../img/spots/toyooka/eirakukan/story.png" alt="">
+          <div class="col-12 position-relative">
+            <img class="lg" src="../img/spots/toyooka/eirakukan/story.png" alt="">
+            <p class="formal-S" id="responsive" style="letter-spacing: 0.5em; line-height: 3; font-size: 1rem; font-weight: 100;">
+              <span style="font-size: 1.8em; line-height: 2;font-weight: 400; letter-spacing: 0.6em;">四十四年もの<span>時を経て</span><br>奇跡の復活を遂げた<span>芝居小屋</span></span><br>
+              <br>
+              豊岡市出石町にある芝居小屋。<br>
+              その歴史は明治三十四年にも遡る。<br>
+              当時は娯楽の中心地として栄えていたが、<br>
+              テレビの普及などの影響で<br>
+              昭和三十九年に閉館。<br>
+              しかし、地元の人々から復活が望まれ、<br>
+              約二十年に渡る復活活動を行い、<br>
+              平成二十年に復活。<br>
+              それ以来多くの観光客を魅了し続けている。
+            </p>
           </div>
         </div>
       </div>
