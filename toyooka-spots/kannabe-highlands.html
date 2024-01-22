@@ -181,27 +181,18 @@
   <script type="text/javascript">
     // ページの読み込みが完了してから実行
     $(function () {
-      // スクロール途中から表示したいメニューバーを指定
       var navBox = $("#nav");
       var h = $("#xh").offset();
-      // メニューバーは初期状態では消しておく
-
-      // 表示を開始するスクロール量を設定(px)
       $(window).resize(function () {
         var h = $("#xh").offset();
       });
-      // スクロールされた際に実行
       $(window).scroll(function () {
-        // 現在のスクロール位置を取得
         var ScrollPos = $(window).scrollTop();
-        // 現在のスクロール位置と、目的のスクロール位置を比較
         if (ScrollPos > h.top) {
-          // 表示(フェイドイン)
           navBox.removeClass("navbar-dark");
           navBox.addClass("navbar-light");
         }
         else {
-          // 非表示(フェイドアウト)
           navBox.removeClass("navbar-light");
           navBox.addClass("navbar-dark");
         }
