@@ -15,6 +15,28 @@
     href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Shippori+Mincho+B1:wght@400;500;600;700&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,600;0,700;0,800;0,900&display=swap"
     rel="stylesheet">
   <title>香住漁港</title>
+  <style>
+    .animation_5 {
+      display: inline-block !important;
+    }
+
+    .animation_5::after {
+      content: '';
+      display: block;
+      background-color: #EF845C;
+      transform: scale(0, 1)translateY(-50%);
+      transform-origin: left top;
+      transition: transform 0.7s ease-in-out 0.3s;
+      height: 10px;
+      width: 100%;
+      z-index: -1;
+      position: relative;
+    }
+
+    .active_5::after {
+      transform: scale(1, 1)translateY(-50%);
+    }
+  </style>
 </head>
 
 <body>
@@ -154,15 +176,48 @@
         </div>
         <div class="d-flex mb-3 align-items-center">
           <img src="../img/icon/activity.svg" style="width: 45px;" alt="">
-          <h4 class="modern-M ms-3" style="font-weight: 600;">プログラム紹介</h4>
+          <h4 class="modern-M ms-3" style="font-weight: 600;">プログラムの一例</h4>
         </div>
         <div class="w-100" style="background-color: #212529; height: 1px;"></div>
-        <h3 class="mt-3" style="line-height: 1;">
-          <span class="modern-enX">01.</span>&ensp;<span class="modern-M fw-bold">セコがに綺麗に食べよう大会</span>
-        </h3>
+        <div class="row mt-4">
+          <div class="col-2"><img src="../img/spots/kami/kasumi-fishing-port/e1.svg" alt=""></div>
+          <div class="col-10 d-flex flex-column justify-content-center">
+            <div>
+              <h3 class="modern-M fw-bold animation_5" style="line-height: 1;">ちくわまき大会</h3>
+            </div>
+            <p class="modern-S mt-2">巻くちくわの数はなんと1000本!</p>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-2"><img src="../img/spots/kami/kasumi-fishing-port/e2.svg" alt=""></div>
+          <div class="col-10 d-flex flex-column justify-content-center">
+            <div>
+              <h3 class="modern-M fw-bold animation_5" style="line-height: 1;">セコがに綺麗に食べよう大会</h3>
+            </div>
+            <p class="modern-S mt-2">抽選で選ばれた方限定でセコガニをどれだけきれいに食べられるかを競います。</p>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-2"><img src="../img/spots/kami/kasumi-fishing-port/e3.svg" alt=""></div>
+          <div class="col-10 d-flex flex-column justify-content-center">
+            <div>
+              <h3 class="modern-M fw-bold animation_5" style="line-height: 1;"> 海産物素人セリ市</h3>
+            </div>
+            <p class="modern-S mt-2">新鮮な海産物が格安で購入できるかも...!</p>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-2"><img src="../img/spots/kami/kasumi-fishing-port/e4.svg" alt=""></div>
+          <div class="col-10 d-flex flex-column justify-content-center">
+            <div>
+              <h3 class="modern-M fw-bold animation_5" style="line-height: 1;">大じゃんけん大会</h3>
+            </div>
+            <p class="modern-S mt-2">じゃんけんで勝ち残れば豪華商品をゲット！</p>
+          </div>
+        </div>
       </div>
       <div class="col-12"></div>
-      <div class="col-xl-6 mb-5">
+      <div class="col-lg-6 mb-5">
         <div class="info info-modern no-sticky">
           <div class="row">
             <div class="col info-title" style="padding:0.7rem;">
@@ -175,35 +230,11 @@
           </div>
           <div class="row gy-4">
             <div class="col-12" style="padding-top:1.5rem;">
-              <img src="../img/icon/not-open.svg" alt="">
-              <div class="ms-3">
-                <p>定休日</p>
-                <div></div>
-                <h5>毎週水曜日 (不定休)</h5>
-              </div>
-            </div>
-            <div class="col-12">
-              <img src="../img/icon/yen.svg" alt="">
-              <div class="ms-3">
-                <p>料金(昼)</p>
-                <div></div>
-                <h5>1000 ~ 2500円</h5>
-              </div>
-            </div>
-            <div class="col-12">
-              <img src="../img/icon/yen.svg" alt="">
-              <div class="ms-3">
-                <p>料金(夜)</p>
-                <div></div>
-                <h5>3000 ~ 4000円</h5>
-              </div>
-            </div>
-            <div class="col-12">
               <img src="../img/icon/parking.svg" alt="">
               <div class="ms-3">
                 <p>駐車場</p>
                 <div></div>
-                <h5>なし</h5>
+                <h5>あり</h5>
               </div>
             </div>
             <div class="col-12">
@@ -217,7 +248,7 @@
           </div>
         </div>
       </div>
-      <div class="col-xl-6 d-flex flex-column mb-5">
+      <div class="col-lg-6 d-flex flex-column mb-5">
         <div class="col-12 info-title info-modern " style="padding:0.7rem;">
           <img src="../img/icon/maps.svg" alt="">
           <h4>&thinsp;地図&nbsp;<span>Maps&nbsp;</span></h4><br>
@@ -225,7 +256,7 @@
         <div class="col-12" style="flex-grow: 1;">
           <div class="map-border h-100" style="padding-bottom:1.5rem;">
             <iframe id="map" class="w-100 h-100"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.0748926568126!2d134.81022527578534!3d35.62588017260517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fffc83ac454d455%3A0x24e8f4a56084bea4!2z5LiA6a2a5LiA5oG1!5e0!3m2!1sja!2sjp!4v1704699950462!5m2!1sja!2sjp"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.2773523607234!2d134.6276795764803!3d35.64553773193276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fffcca61a8814fb%3A0x2430664de31ce8bb!2z6aaZ5L2P5ryB5riv6KW_5riv!5e0!3m2!1sja!2sjp!4v1706187160191!5m2!1sja!2sjp"
               style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
@@ -236,7 +267,31 @@
   <!-- Optional JavaScript; choose one of the two! -->
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="../js/bootstrap.bundle.min.js"></script>
-
+  <script type="text/javascript" src="../js/jQuery-3.7.0.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      const setObserver = () => {
+        const callback = (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active_5');
+            } else {
+              entry.target.classList.remove('active_5');
+            }
+          });
+        }
+        const options = {
+          threshold: [0, 1]
+        }
+        const observer = new IntersectionObserver(callback, options);
+        const targets = document.querySelectorAll('.animation_5');
+        targets.forEach((elem) => {
+          observer.observe(elem);
+        });
+      }
+      setObserver();
+    });
+  </script>
   <!-- Option 2: Separate Popper and Bootstrap JS -->
   <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
