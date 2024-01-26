@@ -354,17 +354,11 @@ p {
 
 .map-border {
     border: 1px solid #212529;
-    height: auto;
-    padding-top: 40%;
-    position: relative;
+    min-height: 400px;
 }
-
-#map {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index:-1;
+.map-border-w {
+    border: 1px solid #FFFFFF;
+    min-height: 400px;
 }
 
 .formal-title h1,
