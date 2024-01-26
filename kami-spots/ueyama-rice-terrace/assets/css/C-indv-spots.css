@@ -1,8 +1,3 @@
-@font-face {
-    font-family: 'DIN2014-DemiBold';
-    src: url("../fonts/DIN2014-DemiBold.ttf");
-}
-
 body {
     font-family: "inter", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic UI", "Yu Gothic", "Meiryo", sans-serif;
 }
@@ -94,27 +89,6 @@ body {
     /*0.87*/
 }
 
-.formal-St {
-    /*p please*/
-    font-family: "Noto Serif JP", serif;
-    font-weight: 400;
-    letter-spacing: 0.15em;
-    line-height: 1.3;
-    font-size: 0.9rem;
-    /*0.87*/
-}
-
-.formal-Sb {
-    /*p please*/
-    font-family: "Noto Serif JP", serif;
-    font-weight: 400;
-    letter-spacing: 0.3em;
-    line-height: 1;
-    font-size: 0.7rem;
-    /*0.87*/
-    transform: translateY(70%);
-}
-
 .modern-L {
     /*h1 please*/
     font-family: "Noto Sans JP", sans-serif;
@@ -138,21 +112,6 @@ body {
     letter-spacing: 0.12em;
     line-height: 2.3;
     font-size: 0.92rem;
-}
-
-.highlight-S {
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    font-size: 1.45em;
-    border-bottom: solid 3px #69E075;
-}
-
-.under-line::after {
-    display: block;
-    content: "";
-    width: 100%;
-    height: 1px;
-    background-color: #212529;
 }
 
 .info-title {
@@ -189,11 +148,6 @@ body {
     background-color: #212529;
 }
 
-.sticky {
-    position: sticky;
-    top: 15%;
-}
-
 .info .col-12 {
     display: flex;
     align-items: flex-end;
@@ -207,10 +161,6 @@ body {
 
 .info a {
     text-decoration: none;
-}
-
-#space {
-    width: 100%;
 }
 
 .info-formal h4,
@@ -238,16 +188,15 @@ p {
 
 .map-border {
     border: 1px solid #212529;
-    height: auto;
-    padding-top: 40%;
-    position: relative;
+}
+.map-border-w {
+    border: 1px solid #FFFFFF;
 }
 
-#map {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+@media screen and (max-width:991px) {
+    .map-border,.map-border-w {
+        min-height: 400px;
+    }
 }
 
 .formal-title h1,

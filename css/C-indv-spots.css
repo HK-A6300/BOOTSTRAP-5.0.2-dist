@@ -352,15 +352,19 @@ p {
     font-family: "Noto Sans JP", sans-serif;
 }
 
-.map-border {
+
+.map-border,.map-border-xl {
     border: 1px solid #212529;
-    min-height: 400px;
 }
 .map-border-w {
     border: 1px solid #FFFFFF;
-    min-height: 400px;
 }
 
+@media screen and (max-width:991px) {
+    .map-border,.map-border-w,.map-border-xl {
+        min-height: 400px;
+    }
+}
 .formal-title h1,
 .formal-title h6 {
     font-family: "Noto Serif JP", serif !important;
@@ -394,12 +398,6 @@ p {
     top: 0;
     z-index: 20;
     width: 100%;
-}
-
-.kannabe-border {
-    border-bottom: 1px solid #212529;
-    border-left: 1px solid #212529;
-    border-right: 1px solid #212529;
 }
 
 @media screen and (min-width:991px) {
