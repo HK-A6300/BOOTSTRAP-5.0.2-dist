@@ -64,25 +64,25 @@ img {
 .nav-link{
     letter-spacing: 0.1em;
 }
-@media screen and (max-width: 1401px) {
+@media screen and (max-width: 1399px) {
     .xxl {
         display: none !important;
     }
 }
 
-@media screen and (min-width: 1402px) {
+@media screen and (min-width: 1400px) {
     .xxl-x {
         display: none !important;
     }
 }
 
-@media screen and (max-width: 1201px) {
+@media screen and (max-width: 1199px) {
     .xl {
         display: none !important;
     }
 }
 
-@media screen and (min-width: 1202px) {
+@media screen and (min-width: 1200px) {
     .xl-x {
         display: none !important;
     }
@@ -361,7 +361,12 @@ p {
 }
 
 @media screen and (max-width:991px) {
-    .map-border,.map-border-w,.map-border-xl {
+    .map-border,.map-border-w {
+        min-height: 400px;
+    }
+}
+@media screen and (max-width:1201px) {
+    .map-border-xl {
         min-height: 400px;
     }
 }
