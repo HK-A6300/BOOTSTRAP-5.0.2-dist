@@ -10,11 +10,93 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/my-css-top.css">
-  <link rel="stylesheet" href="./css/tiny-slider.css">
+  <link rel="stylesheet" href="./css/owl.carousel.min.css">
+  <link rel="stylesheet" href="./css/owl.theme.default.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shippori+Mincho+B1:wght@400;500;600;700&family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Bad+Script&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <title>ようこそ、但馬へ。</title>
+  <style>
+    .shadow-effect {
+      background: #fff;
+      padding: 20px;
+      border-radius: 4px;
+      text-align: center;
+      border: 1px solid #ECECEC;
+      box-shadow: 0 19px 38px rgba(0, 0, 0, 0.10), 0 15px 12px rgba(0, 0, 0, 0.02);
+    }
+
+    #customers-testimonials .shadow-effect p {
+      font-family: inherit;
+      font-size: 17px;
+      line-height: 1.5;
+      margin: 0 0 17px 0;
+      font-weight: 300;
+    }
+
+    .testimonial-name {
+      margin: -17px auto 0;
+      display: table;
+      width: auto;
+      background: #3190E7;
+      padding: 9px 35px;
+      border-radius: 12px;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 9px 18px rgba(0, 0, 0, 0.12), 0 5px 7px rgba(0, 0, 0, 0.05);
+    }
+
+    #customers-testimonials .item {
+      text-align: center;
+      padding: 50px;
+      margin-bottom: 80px;
+      opacity: .2;
+      -webkit-transform: scale3d(0.8, 0.8, 1);
+      transform: scale3d(0.8, 0.8, 1);
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+    }
+
+    #customers-testimonials .owl-item.active.center .item {
+      opacity: 1;
+      -webkit-transform: scale3d(1.0, 1.0, 1);
+      transform: scale3d(1.0, 1.0, 1);
+    }
+
+    .owl-carousel .owl-item img {
+      transform-style: preserve-3d;
+      max-width: 90px;
+      margin: 0 auto 17px;
+    }
+
+    #customers-testimonials.owl-carousel .owl-dots .owl-dot.active span,
+    #customers-testimonials.owl-carousel .owl-dots .owl-dot:hover span {
+      background: #3190E7;
+      transform: translate3d(0px, -50%, 0px) scale(0.7);
+    }
+
+    #customers-testimonials.owl-carousel .owl-dots {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+    }
+
+    #customers-testimonials.owl-carousel .owl-dots .owl-dot {
+      display: inline-block;
+    }
+
+    #customers-testimonials.owl-carousel .owl-dots .owl-dot span {
+      background: #3190E7;
+      display: inline-block;
+      height: 20px;
+      margin: 0 2px 5px;
+      transform: translate3d(0px, -50%, 0px) scale(0.3);
+      transform-origin: 50% 50% 0;
+      transition: all 250ms ease-out 0s;
+      width: 20px;
+    }
+  </style>
 </head>
 
 <body>
@@ -129,11 +211,61 @@
     </div>
     </div>
   </section>
-  <div class="my-slider">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
+  <section class="testimonials pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div id="customers-testimonials" class="owl-carousel">
+            <div class="item">
+              <div class="shadow-effect">
+                <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg"
+                  alt="">
+                <p>Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely
+                  synergize resource taxing relationships via premier niche markets. Professionally cultivate.</p>
+              </div>
+              <div class="testimonial-name">EMILIANO AQUILANI</div>
+            </div>
+            <div class="item">
+              <div class="shadow-effect">
+                <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg"
+                  alt="">
+                <p>Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely
+                  synergize resource taxing relationships via premier niche markets. Professionally cultivate.</p>
+              </div>
+              <div class="testimonial-name">ANNA ITURBE</div>
+            </div>
+            <div class="item">
+              <div class="shadow-effect">
+                <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg"
+                  alt="">
+                <p>Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely
+                  synergize resource taxing relationships via premier niche markets. Professionally cultivate.</p>
+              </div>
+              <div class="testimonial-name">LARA ATKINSON</div>
+            </div>
+            <div class="item">
+              <div class="shadow-effect">
+                <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg"
+                  alt="">
+                <p>Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely
+                  synergize resource taxing relationships via premier niche markets. Professionally cultivate.</p>
+              </div>
+              <div class="testimonial-name">IAN OWEN</div>
+            </div>
+            <div class="item">
+              <div class="shadow-effect">
+                <img class="img-circle" src="http://themes.audemedia.com/html/goodgrowth/images/testimonial3.jpg"
+                  alt="">
+                <p>Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely
+                  synergize resource taxing relationships via premier niche markets. Professionally cultivate.</p>
+              </div>
+              <div class="testimonial-name">MICHAEL TEDDY</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <section id="areas">
     <div class="container pt-5 pb-5 ">
       <div class="row">
@@ -282,8 +414,8 @@
   <!--<script type="text/javascript" src="js/jQuery-3.7.0.js"></script>-->
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="./js/bootstrap.bundle.min.js"></script>
-  <script src="./js/jQuery-3.7.0.js"></script>
-  <script type="text/javascript" src="./js/tiny-slider.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="./js/owl.carousel.min.js"></script>
   <script type="text/javascript">
     $(document).ready(function ($) {
       "use strict";

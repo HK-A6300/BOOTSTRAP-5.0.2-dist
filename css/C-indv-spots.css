@@ -355,9 +355,11 @@ p {
 
 .map-border,.map-border-xl {
     border: 1px solid #212529;
+    min-height: 340px;
 }
 .map-border-w {
     border: 1px solid #FFFFFF;
+    min-height: 340px;
 }
 
 @media screen and (max-width:991px) {
