@@ -11,6 +11,26 @@ body {
     font-family: "Cinzel", "Inter", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic UI", "Yu Gothic", "Meiryo", sans-serif;
 }
 
+.formal-jp {
+    font-family: "Shippori Mincho B1", serif !important;
+}
+
+.formal-en {
+    font-family: "Cinzel", serif !important;
+}
+
+.modern-jp {
+    font-family: "Noto Sans JP", sans-serif !important;
+}
+
+.modern-en {
+    font-family: "Inter", sans-serif !important;
+}
+
+.modern-enX {
+    font-family: "Montserrat", sans-serif !important;
+}
+
 .cov-padding {
     padding: 0 6.25vw;
 }
@@ -27,18 +47,6 @@ body {
     border-radius: 3px;
 }
 
-.white {
-    color: white;
-}
-
-.no-padding {
-    padding: 0;
-}
-
-.no-margin {
-    margin: 0;
-}
-
 .intro-video {
     color: #FFF;
     position: relative;
@@ -48,20 +56,15 @@ body {
 .video-area {
     position: fixed;
     z-index: -1;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
 }
 
-.intro-video video {
+.intro-video iframe {
     position: absolute;
     z-index: -1;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
+    object-fit:cover;
     width: 177.77777778vh;
     /* 16:9 の幅→16 ÷ 9＝ 177.77% */
     height: 56.25vw;
@@ -146,8 +149,13 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: clamp(26px, 3.7vw, 10000px);
-    height: 100vh;
+    height: 100%;
     width: 100%;
+}
+@media screen and (max-width:991px) {
+    .intro-video {
+        height: 80vh;
+    }
 }
 
 .element-div>div {
@@ -156,17 +164,30 @@ body {
     position: relative;
 }
 
-#montserrat {
-    font-size: 77px;
-    letter-spacing: 1px;
-    line-height: 75px;
-    font-family: "Montserrat";
-    font-weight: 700;
-    -moz-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    -webkit-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    -ms-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    font-feature-settings: "palt";
+.element-div .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter:drop-shadow( 0px 0px 4px rgba(0, 0, 0, 0.2));
+    width: 45%;
+}
+.element-div .logo {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+}
+
+@media screen and (max-width:991px) {
+    .element-div .title,.element-div .logo {
+        position: static;
+        height: 20vw;
+        width: inherit;
+    }
+    .element-div .title {
+        margin-left: 2%;
+        padding:3%;
+    }
 }
 
 .element-div h1 span {
@@ -174,10 +195,19 @@ body {
     margin: 0 0 15px 0;
 }
 
-.element-div img {
-    position: absolute;
-    bottom: 0;
-    width: 100px;
+@media screen and (max-width:991px) {
+    .responsive-2{
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+.kill-nav{
+    display: none!important;
 }
 
 .span-container,
@@ -185,8 +215,8 @@ body {
     width: 45px;
     height: 45px;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: clamp(26px, 3.7vw, 10000px);;
+    top: clamp(26px, 3.7vw, 10000px);;
 }
 
 .checkbox {
@@ -232,7 +262,7 @@ body {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    z-index: 50;
+    z-index: 10;
     background: rgba(0, 0, 0, 0.5);
     transition: all 250ms ease-out;
     opacity: 0;
@@ -265,16 +295,6 @@ body {
 
 .checkbox:checked~.nav-container {
     opacity: 1;
-}
-
-.fluid-olex {
-    padding: 6vw 6.2vw !important;
-}
-
-@media screen and (max-width: 991px) {
-    .fluid-olex {
-        padding: 12vw 12.4vw !important;
-    }
 }
 
 #intro {
