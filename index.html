@@ -21,7 +21,7 @@
 
 <body>
   <div class="intro-video">
-    <input id="nav-trigger" type="checkbox" class="checkbox" name="nav-trigger">
+    <input id="nav-trigger" type="checkbox" class="checkbox">
     <div class="span-container">
       <span></span>
       <span></span>
@@ -420,14 +420,17 @@
     function noscroll(e){
       e.preventDefault();
     }
-    $('input[name="nav-trigger"]').change(function(){
-      if($(this).prop('checked')){
-        document.addEventListener('touchmove', noscroll, {passive: false});
-        document.addEventListener('wheel', noscroll, {passive: false});
-      }else{
-        document.removeEventListener('touchmove', noscroll);
-        document.removeEventListener('wheel', noscroll);
-      }
+ 
+    $('#nav-trigger').on('click', function(){
+      document.addEventListener('touchmove', noscroll, {passive: false});
+      document.addEventListener('wheel', noscroll, {passive: false});
+      $('#nav-trigger').attr('id','nav-opened nav-trigger');
+    });
+ 
+    $('#nav-opened').on('click', function(){
+      document.removeEventListener('touchmove', noscroll);
+      document.removeEventListener('wheel', noscroll);
+      $('#nav-trigger').attr('id','nav-trigger');
     });
   </script>
   <script type="text/javascript">
