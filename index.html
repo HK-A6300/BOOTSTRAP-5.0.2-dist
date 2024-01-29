@@ -365,8 +365,8 @@
       autoplaySpeed: 3000,
       infinite: true,
       dots: true,
-      cssEase:'ease-in-out',
-      speed:300,
+      cssEase: 'ease-in-out',
+      speed: 300,
       responsive: [
         {
           breakpoint: 1400,
@@ -417,14 +417,14 @@
     });
   </script>
   <script type="text/javascript">
-    function noscroll(e){
+    function noscroll(e) {
       e.preventDefault();
     }
-    $('input[name="nav-trigger"]').change(function(){
-      if($(this).prop('checked')){
-        document.addEventListener('touchmove', noscroll, {passive: false});
-        document.addEventListener('wheel', noscroll, {passive: false});
-      }else{
+    $('input[name="nav-trigger"]').change(function () {
+      if ($(this).prop('checked')) {
+        document.addEventListener('touchmove', noscroll, { passive: false });
+        document.addEventListener('wheel', noscroll, { passive: false });
+      } else {
         document.removeEventListener('touchmove', noscroll);
         document.removeEventListener('wheel', noscroll);
       }
@@ -471,12 +471,18 @@
   </script>
   <script type="text/javascript">
     $(function () {
-      var toyookaH = $("#toyooka").offset().top - $(window).height()/2;
-      var asagoH = $("#asago").offset().top - $(window).height()/2;
-      var yabuH = $("#yabu").offset().top - $(window).height()/2;
-      var kamiH = $("#kami").offset().top - $(window).height()/2;
-      var shinonsenH = $("#shinonsen").offset().top - $(window).height()/2;
+      var nav = $("#nav-trigger").offset().top + $("#nav-trigger").height();
+      var toyookaH = $("#toyooka").offset().top - $(window).height() / 2;
+      var asagoH = $("#asago").offset().top - $(window).height() / 2;
+      var yabuH = $("#yabu").offset().top - $(window).height() / 2;
+      var kamiH = $("#kami").offset().top - $(window).height() / 2;
+      var shinonsenH = $("#shinonsen").offset().top - $(window).height() / 2;
       var ScrollPos = $(window).scrollTop();
+      if (ScrollPos > nav) {
+        $("#nav").addClass("kill-nav");
+      } else {
+        $("#nav").removeClass("kill-nav");
+      }
       if (ScrollPos > toyookaH) {
         $("#toyooka").addClass("fade-in-left");
       }
@@ -493,12 +499,18 @@
         $("#shinonsen").addClass("fade-in-left");
       }
       $(window).resize(function () {
-        var toyookaH = $("#toyooka").offset().top - $(window).height()/2;
-        var asagoH = $("#asago").offset().top - $(window).height()/2;
-        var yabuH = $("#yabu").offset().top - $(window).height()/2;
-        var kamiH = $("#kami").offset().top - $(window).height()/2;
-        var shinonsenH = $("#shinonsen").offset().top - $(window).height()/2;
+        var nav = $("#nav-trigger").offset().top + $("#nav-trigger").height();
+        var toyookaH = $("#toyooka").offset().top - $(window).height() / 2;
+        var asagoH = $("#asago").offset().top - $(window).height() / 2;
+        var yabuH = $("#yabu").offset().top - $(window).height() / 2;
+        var kamiH = $("#kami").offset().top - $(window).height() / 2;
+        var shinonsenH = $("#shinonsen").offset().top - $(window).height() / 2;
         var ScrollPos = $(window).scrollTop();
+        if (ScrollPos > nav) {
+          $("#nav").addClass("kill-nav");
+        } else {
+          $("#nav").removeClass("kill-nav");
+        }
         if (ScrollPos > toyookaH) {
           $("#toyooka").addClass("fade-in-left");
         }
@@ -519,6 +531,11 @@
         var ScrollPos = $(window).scrollTop();
         console.log(shinonsenH);
         console.log(ScrollPos);
+        if (ScrollPos > nav) {
+          $("#nav").addClass("kill-nav");
+        } else {
+          $("#nav").removeClass("kill-nav");
+        }
         if (ScrollPos > toyookaH) {
           $("#toyooka").addClass("fade-in-left");
         }
@@ -539,7 +556,7 @@
   </script>
   <script type="text/javascript">
     $(function () {
-      var introH = $("#intro-img").offset().top - $(window).height()/2;
+      var introH = $("#intro-img").offset().top - $(window).height() / 2;
       var ScrollPos = $(window).scrollTop();
       if (ScrollPos > introH) {
         $("#intro-img").addClass("fade-in");
@@ -552,7 +569,7 @@
         }
       });
       $(window).resize(function () {
-        var introH = $("#intro-img").offset().top - $(window).height()/2;
+        var introH = $("#intro-img").offset().top - $(window).height() / 2;
       });
     });
   </script>
