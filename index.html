@@ -417,7 +417,19 @@
     });
   </script>
   <script type="text/javascript">
-    $()
+    function noscroll(e){
+      e.preventDefault();
+    }
+ 
+    $('.checkbox').on('click', function(){
+      document.addEventListener('touchmove', noscroll, {passive: false});
+      document.addEventListener('wheel', noscroll, {passive: false});
+    });
+ 
+    $('.checkbox.checked').on('click', function(){
+      document.removeEventListener('touchmove', noscroll);
+      document.removeEventListener('wheel', noscroll);
+    });
   </script>
   <script type="text/javascript">
     $(function () {
