@@ -417,11 +417,17 @@
     });
   </script>
   <script type="text/javascript">
+    var ScrollPos = $(window).scrollTop();
+    var nav = $("#nav-trigger").offset().top + $("#nav-trigger").height();
     function noscroll(e) {
       e.preventDefault();
     }
+    $(window).scroll(function (){
+      var ScrollPos = $(window).scrollTop();
+      console.log(ScrollPos);
+    });
     $('input[name="nav-trigger"]').change(function () {
-      if ($(this).prop('checked')) {
+      if ($(this).prop('checked') && ScrollPos < nav ) {
         document.addEventListener('touchmove', noscroll, { passive: false });
         document.addEventListener('wheel', noscroll, { passive: false });
       } else {
