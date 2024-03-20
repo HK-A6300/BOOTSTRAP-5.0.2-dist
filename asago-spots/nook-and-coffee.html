@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="jp">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PZL73HVR');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Bootstrap CSS -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/C-indv-spots.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Klee+One:wght@400;600&family=Shippori+Mincho+B1:wght@400;500;600;700&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Cinzel:wght@400;500;600;700;800;900&family=Ms+Madi&display=swap"
+    rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+  <title>nook&coffee</title>
+  <style type="text/css">
+    .top-img{
+      min-height:300px; 
+      object-fit:cover;
+    }
+     @media screen and (min-width: 1200px){
+      .top-img{
+        height:100vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZL73HVR" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-light pt-3 pb-3 ps-3 pe-3 nav-float" id="nav">
+    <div class="container-fluid">
+      <p class="navbar-brand modern-en" href="#">nook&coffee</p>
+      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#Navber"
+        aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="Navber">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../index.html">ホーム</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              目的で探す
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">食事</a></li>
+              <li><a class="dropdown-item" href="#">観光</a></li>
+              <li><a class="dropdown-item" href="#">遊び</a></li>
+              <li><a class="dropdown-item" href="#">宿泊</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">全て</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              地域で探す
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="../toyooka-spots.html">豊岡</a></li>
+              <li><a class="dropdown-item" href="../asago-spots.html">朝来</a></li>
+              <li><a class="dropdown-item" href="../yabu-spots.html">養父</a></li>
+              <li><a class="dropdown-item" href="../shinonsen-spots.html">新温泉町</a></li>
+              <li><a class="dropdown-item" href="../kami-spots.html">香美町</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="../all-spots.html">全て</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <div class="container-fluid gx-0">
+    <div class="row gx-0">
+      <div class="col-12 position-relative">
+        <img class="top-img" src="../img/spots/asago/nook-and-coffee/top.jpg" alt="">
+        <!--pc-->
+        <img class="position-absolute bottom-0 end-0 md" style="width: 85%; pointer-events: none;"
+          src="../img/spots/asago/nook-and-coffee/Vector.svg" alt="">
+        <div class="position-absolute top-0 end-0 d-flex md align-items-start justify-content-end" style="transform: translate(-3vw,2vw);">
+          <img style="width: 4vw; min-width: 36px; max-width:70px; pointer-events: none;" src="../img/spots/asago/nook-and-coffee/exp-2.svg" alt="">
+          <img style="width: 4vw; min-width: 36px; max-width:70px; margin-left:clamp(0px,1.5vw,25px); pointer-events: none;" src="../img/spots/asago/nook-and-coffee/exp-1.svg" alt="">
+        </div>
+        <img class="position-absolute top-50 start-0 md" style="
+        transform: translateX(-50%)rotate(90deg)translateY(-125%);
+        transform-origin: 50% 50%;
+        pointer-events: none;
+        width: 15%;
+        min-width: 130px;
+        max-width: 230px;
+        " src="../img/spots/asago/nook-and-coffee/Wadayama,Asago.svg" alt="">
+        <!--sm-->
+        <div class="d-flex md-x flex-column position-absolute bottom-0 start-0">
+          <img class="w-25" style="pointer-events: none; transform:translate(3vw,-3vw);"
+            src="../img/spots/asago/nook-and-coffee/sm-subtitle.svg" alt="">
+          <img class="w-100" style="pointer-events: none;" src="../img/spots/asago/nook-and-coffee/sm.svg" alt="">
+        </div>
+        <img class="position-absolute top-0 end-0 md-x" style="
+        transform: rotate(-90deg)translateY(-100%);
+        transform-origin: 100% 100%;
+        pointer-events: none;
+        width: 15%;
+        min-width: 110px;
+        " src="../img/spots/asago/nook-and-coffee/Wadayama,Asago.svg" alt="">
+        <!--end-->
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid" style="background-color: #4FBABC;">
+    <div class="container">
+      <div class="row pt-5 pb-5" id="xh" style="white-space: nowrap;">
+        <div class="col-12 text-center">
+          <p style="letter-spacing:0.5em; font-family: 'Noto Sans JP',sans-serif; font-size: 0.8em;">朝来市和田山町</p>
+          <h1 class="modern-en" style="font-weight:600; line-height:1.4; letter-spacing: 0.1em; font-size: clamp(20px,6vw,40px);">nook&coffee</h1>
+        </div>
+      </div>
+      <div class="row gx-lg-5 pb-5 gy-4">
+        <div class="col-lg-6">
+          <img src="../img/spots/asago/nook-and-coffee/DSC02133.jpg" alt="">
+        </div>
+        <div class="col-lg-6">
+          <h2 class="modern-L" style="letter-spacing: 0.3rem;"><span
+              class="modern-S">ニュージーランド人の店主が作る</span><br>一味違ったランチが楽しめる！</h2>
+          <p class="modern-S mt-3">
+            地元出身の奥様とニュージーランド出身のご主人の二人で経営しているカフェです。サンドイッチやなどのスイーツが主なメニューなのですが、中にはにんじんやスパイスが入った「キャロットケーキ」や スパイスが香る「チャイラテ」などの珍しいメニューもあります。特に「キャロットケーキ」はスイーツの中では上位に入るほどの人気だそうです。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid pt-5"
+    style="border-top: 1px solid #212529; border-bottom: 1px solid #212529; background-color: #212529;">
+    <div class="container">
+      <div class="row pt-4 pb-4">
+        <div class="col-12 text-center">
+          <div class="position-relative d-inline-block">
+            <h1 class="position-relative modern-L modern-enX"
+              style="font-weight: 700; font-size:clamp(50px,4vw,110px); color: #FFFFFF; z-index: 2; letter-spacing: 0.15em;">
+              POIN<span style="letter-spacing: 0;">T</span></h1>
+            <div class="position-absolute d-inline-block"
+              style="top:80%; left:50%; transform: translateX(-42%); background-color:#FFE355; height:5.5%; width: 20%; z-index: 1; margin-top: 3%;">
+            </div>
+          </div>
+        </div>
+        <div class="col-12 kagi-box-wh" style="margin-top:3.2%;">
+          <div class="row row-cols-1 row-cols-lg-4 g-4">
+            <div class="col d-flex">
+              <div class="card position-relative kinosaki-points"
+                style="flex-grow:1; border-radius: 12px; border:#212529 2px solid; overflow: hidden;">
+                <a class="position-absolute" style="top: 0; left: 0; width: 100%; height: 100%;" href="#q-1"></a>
+                <img src="../img/spots/toyooka/kinosaki-burger/P1.jpg" alt="...">
+                <img src="../img/spots/toyooka/kinosaki-burger/P1n.svg" class="position-absolute"
+                  style="top:0; left:5%; width:23%;" alt="">
+                <div class="card-body">
+                  <h5 class="card-title"><span class="marker">但馬牛バーガー</span></h5>
+                  <p class="card-text">このお店の名物バーガー！パティに但馬牛の粗挽き肉100%を使用しています</p>
+                </div>
+              </div>
+            </div>
+            <div class="col d-flex">
+              <div class="card position-relative kinosaki-points"
+                style="flex-grow:1; border-radius: 12px; border:#212529 2px solid; overflow: hidden;">
+                <a class="position-absolute" style="top: 0; left: 0; width: 100%; height: 100%;" href="#q-2"></a>
+                <img src="../img/spots/toyooka/kinosaki-burger/P2.jpg" alt="...">
+                <img src="../img/spots/toyooka/kinosaki-burger/P2n.svg" class="position-absolute"
+                  style="top:0; left:5%; width:23%;" alt="">
+                <div class="card-body">
+                  <h5 class="card-title"><span class="marker">駅から徒歩数分</span></h5>
+                  <p class="card-text">駅前にお店があるのでアクセスが良く、お土産として買って帰るのにも丁度いいです</p>
+                </div>
+              </div>
+            </div>
+            <div class="col d-flex">
+              <div class="card position-relative kinosaki-points"
+                style="flex-grow:1; border-radius: 12px; border:#212529 2px solid; overflow: hidden;">
+                <a class="position-absolute" style="top: 0; left: 0; width: 100%; height: 100%;" href="#q-3"></a>
+                <img src="../img/spots/toyooka/kinosaki-burger/P3.jpg" alt="...">
+                <img src="../img/spots/toyooka/kinosaki-burger/P3n.svg" class="position-absolute"
+                  style="top:0; left:5%; width:23%;" alt="">
+                <div class="card-body">
+                  <h5 class="card-title"><span class="marker">オシャレな店内</span></h5>
+                  <p class="card-text">ゆとりのあるテーブル席、ソファー席でゆっくりとランチを楽しむことができます</p>
+                </div>
+              </div>
+            </div>
+            <div class="col d-flex">
+              <div class="card position-relative kinosaki-points"
+                style="flex-grow:1; border-radius: 12px; border:#212529 2px solid; overflow: hidden;">
+                <a class="position-absolute" style="top: 0; left: 0; width: 100%; height: 100%;" href="#q-4"></a>
+                <img src="../img/spots/toyooka/kinosaki-burger/P4.jpg" alt="...">
+                <img src="../img/spots/toyooka/kinosaki-burger/P4n.svg" class="position-absolute"
+                  style="top:0; left:5%; width:23%;" alt="">
+                <div class="card-body">
+                  <h5 class="card-title"><span class="marker">サイドメニューも充実</span></h5>
+                  <p class="card-text">ハンバーガーだけでなく、フライドポテトなどのサイドメニューも充実しています</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-5 pb-5">
+    <!--sm logo-->
+    <div class="d-flex justify-content-center">
+      <img class="lg-x mb-4" style="min-width:120px; max-width:500px; width:15vw;"
+        src="../img/spots/toyooka/kinosaki-burger/sm-Q1n.svg" alt="">
+    </div>
+    <!--Photo + lg-->
+    <div id="q-1" style="position:relative;">
+      <img src="../img/spots/toyooka/kinosaki-burger/Q1sp.jpg" alt="">
+      <img src="../img/spots/toyooka/kinosaki-burger/Q1n.svg" class="position-absolute lg"
+        style="top:0; right:5%; width: 10%; mix-blend-mode: lighten;" alt="">
+      <div class="row mt-3 gx-lg-5 lg">
+        <div class="col-7">
+          <img src="../img/spots/toyooka/kinosaki-burger/Q1-1.jpg" alt="">
+        </div>
+        <div class="col-5 p-3 d-flex flex-wrap align-content-center">
+          <div>
+            <h1 class="modern-M animation_5" style="font-weight:600; line-height: 1.3;">人気メニュー</h1><br>
+            <h1 class="modern-M animation_5" style="font-weight:600; line-height: 1.3; margin-top: 2%;">但馬牛<span
+                class="modern-en">100%</span></h1>
+            <h1 class="modern-M animation_5" style="font-weight:600; line-height: 1.3; margin-top: 2%;">食べごたえ満点</h1>
+          </div>
+          <p class="mdoern-S" style="margin-top: 7%;">
+            このお店で一番人気のメニュー！<br>但馬牛の粗挽き肉を100%使っていることが特徴です。<br>但馬牛のパティは鉄板焼きで焼かれているので、香ばしくジューシーで食べごたえバッチリです！<br>調味料やソースなどはあえて少なくし、シンプルな味付けにすることでお肉の味が引き立てられ、存分に味わうことができます。
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--sm-->
+    <div class="row gx-lg-4 mt-3 lg-x">
+      <div class="col-lg-10 d-flex flex-column justify-content-center ">
+        <h2 class="modern-L" style="text-align: left;">但馬牛バーガー</h2>
+        <p class="modern-S mt-2">
+          このお店で一番人気のメニュー！特徴はなんといっても、バーガーのバティには但馬牛の粗挽き肉を100%使用していること！また、お肉だけでなく野菜にもこだわっており、季節ごとの最も良い物かつ地元で作られたものを使っているそうです。
+        </p>
+      </div>
+    </div>
+    <div class="mt-3" style="border:4px solid #212529;">
+      <div class="row gx-0">
+        <div class="col-2"><img src="../img/spots/toyooka/kinosaki-burger/moo.svg" alt=""></div>
+        <div class="col-10 position-relative">
+          <h1 class="modern-L position-absolute"
+            style="top:50%; transform:translateY(-50%); font-size: clamp(22.7px,1.6vw,50px); margin-left: 1%;">
+            「但馬牛」って何？
+          </h1>
+        </div>
+      </div>
+      <div class="row p-4 gx-lg-3 gy-3">
+        <div class="col-lg-4">
+          <img src="../img/spots/toyooka/kinosaki-burger/beef (3).jpg" alt="">
+        </div>
+        <div class="col-lg-4">
+          <img src="../img/spots/toyooka/kinosaki-burger/beef (4).jpg" alt="">
+        </div>
+        <div class="col-lg-4">
+          <img src="../img/spots/toyooka/kinosaki-burger/beef (2).jpg" alt="">
+        </div>
+      </div>
+      <p class="ps-4 pe-4 pb-4">
+        そもそも但馬牛って何？と思われた方もいるかも知れません。実は、「但馬牛」は和牛の中でも特に高品質な「日本三大和牛」の「神戸ビーフ」「松坂牛」「近江牛」の素牛なんです。他にも、米沢牛・宮崎牛・飛騨牛などのブランド牛も「但馬牛」が素牛となっており、今ではなんと全国の黒毛和牛の99.9%が但馬牛の血を引いていると言われています。そんな但馬牛の特徴は「赤身と脂のバランス」です。筋繊維が細く上質な脂が出来るので、柔らかく、最高のまろやかさを生み出します。
+      </p>
+    </div>
+  </div>
+
+  <div class="container mt-5 pb-5">
+    <!--sm logo-->
+    <div class="d-flex justify-content-center">
+      <img class="lg-x mb-4" style="min-width:120px; max-width:500px; width:15vw;"
+        src="../img/spots/toyooka/kinosaki-burger/sm-Q2n.svg" alt="">
+    </div>
+    <!--Photo + lg-->
+    <div id="q-2" style="position:relative;">
+      <img src="../img/spots/toyooka/kinosaki-burger/Q2sp.jpg" alt="">
+      <img src="../img/spots/toyooka/kinosaki-burger/Q2n.svg" class="position-absolute lg"
+        style="top:0; right:5%; width: 10%; mix-blend-mode: lighten;" alt="">
+      <div class="row mt-3 gx-lg-5 lg">
+        <div class="col-7">
+          <img src="../img/spots/toyooka/kinosaki-burger/Q2-1.jpg" alt="">
+        </div>
+        <div class="col-5 p-3 d-flex flex-wrap align-content-center">
+          <div>
+            <h1 class="modern-M animation_5" style="font-weight:600; line-height: 1.3;">駅から近いので</h1><br>
+            <h1 class="modern-M animation_5" style="font-weight:600; line-height: 1.3; margin-top: 4%;">お土産にも！</h1>
+          </div>
+          <p class="mdoern-S" style="margin-top: 7%;">
+            このお店は駅前の道にあるお店で駅からとても近く、徒歩数分で行くことができます。城崎温泉の帰り道にちょっとおみやげを買いに行くのにもピッタリではないでしょうか。</p>
+        </div>
+      </div>
+    </div>
+    <!--sm-->
+    <div class="row gx-lg-4 mt-3 lg-x">
+      <div class="col-lg-10 d-flex flex-column justify-content-center ">
+        <h2 class="modern-L" style="text-align: left;">駅から徒歩数分</h2>
+        <p class="modern-S mt-2">このお店は駅前の道にあるお店で駅からとても近く、徒歩数分で行くことができます。城崎温泉の帰り道にちょっとおみやげを買いに行くのにもピッタリではないでしょうか。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5 pb-5">
+    <!--sm logo-->
+    <div class="d-flex justify-content-center">
+      <img class="lg-x mb-4" style="min-width:120px; max-width:500px; width:15vw;"
+        src="../img/spots/toyooka/kinosaki-burger/sm-Q3n.svg" alt="">
+    </div>
+    <!--Photo + lg-->
+    <div id="q-3" style="position:relative;">
+      <img src="../img/spots/toyooka/kinosaki-burger/Q3sp.jpg" alt="">
+      <img src="../img/spots/toyooka/kinosaki-burger/Q3n.svg" class="position-absolute lg"
+        style="top:0; right:5%; width: 10%; mix-blend-mode: lighten;" alt="">
+      <div class="row mt-3 gx-lg-5 lg">
+        <div class="col-7">
+          <img src="../img/spots/toyooka/kinosaki-burger/Q3-1.jpg" alt="">
+        </div>
+        <div class="col-5 p-3 d-flex flex-wrap align-content-center">
+          <div>
+            <h1 class="modern-M animation_5" style="font-weight:600; line-height: 1.3;">ゆとりのある店内</h1><br>
+            <h1 class="modern-M animation_5" style="font-weight:600; line-height: 1.3; margin-top: 4%;"><span
+                class="modern-en">Wi-Fi</span>も完備</h1>
+          </div>
+          <p class="mdoern-S" style="margin-top: 7%;">
+            お店の中はソファー席とテーブル席があり、間隔が広く取られているのでゆったりすることができます。また、フリーWi-Fiも完備しています。</p>
+        </div>
+      </div>
+    </div>
+    <!--sm-->
+    <div class="row gx-lg-4 mt-3 lg-x">
+      <div class="col-lg-10 d-flex flex-column justify-content-center ">
+        <h2 class="modern-L" style="text-align: left;">オシャレな店内</h2>
+        <p class="modern-S mt-2">お店の中はソファー席とテーブル席があり、間隔が広く取られているのでゆったりすることができます。また、フリーWi-Fiも完備しています。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5 pb-5">
+    <!--sm logo-->
+    <div class="d-flex justify-content-center">
+      <img class="lg-x mb-4" style="min-width:120px; max-width:500px; width:15vw;"
+        src="../img/spots/toyooka/kinosaki-burger/sm-Q4n.svg" alt="">
+    </div>
+    <!--Photo + lg-->
+    <div id="q-4" style="position:relative;">
+      <img src="../img/spots/toyooka/kinosaki-burger/Q4sp.jpg" alt="">
+      <img src="../img/spots/toyooka/kinosaki-burger/Q4n.svg" class="position-absolute lg"
+        style="top:0; right:5%; width: 10%; mix-blend-mode: lighten;" alt="">
+      <div class="row mt-3 gx-lg-5 lg">
+        <div class="col-7">
+          <img src="../img/spots/toyooka/kinosaki-burger/Q4-1.jpg" alt="">
+        </div>
+        <div class="col-5 p-3 d-flex flex-wrap align-content-center">
+          <div>
+            <h1 class="modern-M animation_5" style="font-weight:600; line-height: 1.3;">但馬牛バーガー</h1><br>
+            <h1 class="modern-M animation_5" style="font-weight:600; line-height: 1.3; margin-top: 4%;">だけじゃない！</h1>
+          </div>
+          <p class="mdoern-S" style="margin-top: 7%;">
+            但馬牛バーガーだけではなく、チーズバーガーやベジタリアンバーガーなどもあります。サイドメニューも充実しており、チキンナゲットやフライドポテト、シェイクなどのドリンクもあります。</p>
+        </div>
+      </div>
+    </div>
+    <!--sm-->
+    <div class="row gx-lg-4 mt-3 lg-x">
+      <div class="col-lg-10 d-flex flex-column justify-content-center ">
+        <h2 class="modern-L" style="text-align: left;">豊富なサイドメニュー</h2>
+        <p class="modern-S mt-2">
+          但馬牛バーガーだけではなく、チーズバーガーやベジタリアンバーガーなどもあります。サイドメニューも充実しており、チキンナゲットやフライドポテト、シェイクなどのドリンクもあります。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid mt-5" style="background-color: #212529;">
+    <div class="container text-white info info-modern pt-5 pb-5">
+      <div class="row gy-5">
+        <div class="col-lg-6">
+          <div class="col info-title" style="padding:0.7rem;">
+            <img src="../img/icon/info-w.svg">
+            <h4>&thinsp;基本情報&nbsp;<span>Information&nbsp;</span></h4><br>
+          </div>
+          <div class="col-12">
+            <div class="info-div" style="background-color: white;"></div>
+          </div>
+          <div class="row gy-4">
+            <div class="col-12" style="padding-top: 1.5rem;">
+              <img src="../img/icon/yen-w.svg" alt="">
+              <div class="ms-3">
+                <p>料金</p>
+                <div></div>
+                <h5>1200~2500円</h5>
+              </div>
+            </div>
+            <div class="col-12">
+              <img src="../img/icon/parking-w.svg" alt="">
+              <div class="ms-3">
+                <p>駐車場</p>
+                <div></div>
+                <h5>なし</h5>
+              </div>
+            </div>
+            <div class="col-12">
+              <img src="../img/icon/site-w.svg" alt="">
+              <div class="ms-3">
+                <p>公式ホームページ</p>
+                <div></div>
+                <h5><a href="https://www.instagram.com/kinosakiburger/?hl=ja">こちらから</a></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="col-12 info-title info-modern" style="padding:0.7rem;">
+            <img src="../img/icon/maps-w.svg" alt="">
+            <h4>&thinsp;地図&nbsp;<span>Maps&nbsp;</span></h4><br>
+          </div>
+          <div class="col-12" style="flex-grow: 1;">
+            <iframe class="map-border w-100 h-100"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.097268520289!2d134.8097888757852!3d35.625328522605265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fffc91116823309%3A0xb11a80f63b571b46!2sKinosaki%20Burger!5e0!3m2!1sja!2sjp!4v1704623901028!5m2!1sja!2sjp"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Optional JavaScript; choose one of the two! -->
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="../js/jQuery-3.7.0.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      var navBox = $("#nav");
+      navBox.hide();
+      $(window).on('load resize scroll', function () {
+        var h = $("#xh").offset();
+        var ScrollPos = $(window).scrollTop();
+        if (ScrollPos > h.top) {
+          navBox.fadeIn();
+        }
+        else {
+          navBox.fadeOut();
+        }
+      });
+    });
+    $(function () {
+      const setObserver = () => {
+        const callback = (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active_5');
+            } else {
+              entry.target.classList.remove('active_5');
+            }
+          });
+        }
+        const options = {
+          threshold: [0, 1]
+        }
+        const observer = new IntersectionObserver(callback, options);
+        const targets = document.querySelectorAll('.animation_5');
+        targets.forEach((elem) => {
+          observer.observe(elem);
+        });
+      }
+      setObserver();
+    });
+  </script>
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+
+</body>
+
+</html>
