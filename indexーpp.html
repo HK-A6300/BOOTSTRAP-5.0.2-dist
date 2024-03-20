@@ -21,6 +21,17 @@
 
 <body>
   <div class="intro-video">
+    <input id="nav-trigger" type="checkbox" class="checkbox" name="nav-trigger">
+    <div class="span-container">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div id="nav" class="nav-container">
+      <a href="./index.html">Home</a>
+      <a href="#intro">Introduction</a>
+      <a href="#areas">Areas</a>
+    </div>
     <div class="element-div">
       <div>
         <div class="responsive-2">
@@ -29,7 +40,7 @@
         </div>
       </div>
     </div>
-    <ul class="lg">
+    <ul>
       <li>
         <div class="nav-element float-end">
           <div class="nav-element-content" onclick="scrollIntro()">
@@ -343,45 +354,6 @@
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="./js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" src="./js/jQuery-3.7.0.js"></script>
-  <script type="text/javascript">
-    $(function () {
-      var wsw = $(window).outerWidth();
-      console.log(wsw);
-      if (wsw >= 1402) {
-        $("#intro-img").addClass("w-100");
-      } else {
-        $("#intro-img").removeClass("w-100");
-      }
-      if (wsw <= 1401 && wsw >= 992) {
-        $("#intro-img").addClass("w-50 mb-5");
-      } else {
-        $("#intro-img").removeClass("w-50 mb-5");
-      }
-      if (wsw <= 991) {
-        $("#intro-img").addClass("w-75");
-      } else {
-        $("#intro-img").removeClass("w-75");
-      }
-      $(window).resize(function () {
-        var wsw = $(window).outerWidth();
-        if (wsw >= 1402) {
-          $("#intro-img").addClass("w-100");
-        } else {
-          $("#intro-img").removeClass("w-100");
-        }
-        if (wsw <= 1401 && wsw >= 992) {
-          $("#intro-img").addClass("w-50 mb-5");
-        } else {
-          $("#intro-img").removeClass("w-50 mb-5");
-        }
-        if (wsw <= 991) {
-          $("#intro-img").addClass("w-75");
-        } else {
-          $("#intro-img").removeClass("w-75");
-        }
-      });
-    });
-  </script>
   <script type="text/javascript" src="slick/slick.min.js"></script>
   <script type="text/javascript">
     $('.center').slick({
@@ -443,7 +415,7 @@
       ]
     });
   </script>
-  <!--<script type="text/javascript">
+  <script type="text/javascript">
     function noscroll(e) {
       e.preventDefault();
     }
@@ -456,9 +428,49 @@
         document.removeEventListener('wheel', noscroll);
       }
     });
-  </script>-->
+  </script>
   <script type="text/javascript">
     $(function () {
+      var wsw = $(window).outerWidth();
+      console.log(wsw);
+      if (wsw >= 1402) {
+        $("#intro-img").addClass("w-100");
+      } else {
+        $("#intro-img").removeClass("w-100");
+      }
+      if (wsw <= 1401 && wsw >= 992) {
+        $("#intro-img").addClass("w-50 mb-5");
+      } else {
+        $("#intro-img").removeClass("w-50 mb-5");
+      }
+      if (wsw <= 991) {
+        $("#intro-img").addClass("w-75");
+      } else {
+        $("#intro-img").removeClass("w-75");
+      }
+      $(window).resize(function () {
+        var wsw = $(window).outerWidth();
+        if (wsw >= 1402) {
+          $("#intro-img").addClass("w-100");
+        } else {
+          $("#intro-img").removeClass("w-100");
+        }
+        if (wsw <= 1401 && wsw >= 992) {
+          $("#intro-img").addClass("w-50 mb-5");
+        } else {
+          $("#intro-img").removeClass("w-50 mb-5");
+        }
+        if (wsw <= 991) {
+          $("#intro-img").addClass("w-75");
+        } else {
+          $("#intro-img").removeClass("w-75");
+        }
+      });
+    });
+  </script>
+  <script type="text/javascript">
+    $(function () {
+      var nav = $("#nav-trigger").offset().top + $("#nav-trigger").height();
       var toyookaH = $("#toyooka").offset().top - $(window).height() / 2;
       var asagoH = $("#asago").offset().top - $(window).height() / 2;
       var yabuH = $("#yabu").offset().top - $(window).height() / 2;
@@ -481,6 +493,7 @@
         $("#shinonsen").addClass("fade-in-left");
       }
       $(window).resize(function () {
+        var nav = $("#nav-trigger").offset().top + $("#nav-trigger").height();
         var toyookaH = $("#toyooka").offset().top - $(window).height() / 2;
         var asagoH = $("#asago").offset().top - $(window).height() / 2;
         var yabuH = $("#yabu").offset().top - $(window).height() / 2;

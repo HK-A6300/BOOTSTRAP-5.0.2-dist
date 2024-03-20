@@ -101,11 +101,9 @@ body {
 }*/
 
 .intro-video ul {
+    display: none;
     z-index: 2;
     width: 100%;
-    position: absolute;
-    top: 50%;
-    transform:translateY(-50%);
 }
 
 .nav-element {
@@ -126,22 +124,20 @@ body {
 }
 
 .nav-element>div>div {
-    width: 8rem;
+    width: 145px;
     height: 1px;
     background-color: #FFF;
 }
 
 .nav-element>div h1 {
     margin: 0 20px 5px 0;
-    letter-spacing: 0.2rem;
-    font-size: 1.65rem;
+    letter-spacing: 6px;
+    font-size: 28px;
 }
 
 .nav-element>div p {
-    margin: 5px 20px 0 0;
-    letter-spacing: 0.1rem;
-    line-height:1.7;
-    font-size: 0.85rem;
+    margin: 3px 23px 0 0;
+    letter-spacing: 0px;
     font-family: "Shippori Mincho B1", serif;
 }
 
@@ -208,6 +204,97 @@ body {
         left: 50%;
         transform: translate(-50%,-50%);
     }
+}
+
+.kill-nav{
+    display: none!important;
+}
+
+.span-container,
+.checkbox {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    right: clamp(26px, 3.7vw, 10000px);;
+    top: clamp(26px, 3.7vw, 10000px);;
+}
+
+.checkbox {
+    opacity: 0 !important;
+    z-index: 100;
+}
+
+.span-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    z-index: 90;
+}
+
+.span-container span {
+    width: 100%;
+    height: 3px;
+    background: white;
+    transition: all 250ms ease-out;
+    transform-origin: 0 0;
+}
+
+.checkbox:checked~.span-container span:nth-last-child(1) {
+    transform: rotate(-45deg) translate(-1px, 0px);
+}
+
+.checkbox:checked~.span-container span:nth-last-child(2) {
+    transform: rotate(0deg) scale(0.2, 0.2);
+    opacity: 0 !important;
+}
+
+.checkbox:checked~.span-container span:nth-last-child(3) {
+    transform: rotate(45deg) translate(0px, -1px);
+}
+
+.nav-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 250ms ease-out;
+    opacity: 0;
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: white;
+    font-size: clamp(1.2rem, 1.2vw, 2.0rem);
+    margin: 1.5rem auto;
+    position: relative;
+
+}
+
+.nav-container a:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 3px;
+    background: #ffffff;
+    transform: scale(0, 1);
+    transition: 0.4s;
+}
+
+.nav-container a:hover:before {
+    transform: scale(1);
+}
+
+.checkbox:checked~.nav-container {
+    opacity: 1;
 }
 
 #intro {
