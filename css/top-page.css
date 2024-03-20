@@ -244,6 +244,23 @@ body {
     display: block;
     opacity: 0;
 }
+@media screen and (min-width:1400px){
+    #intro img{
+        width: 100%;
+    }
+}
+@media screen and (max-width:1399px){
+    #intro img{
+        width: 50%;
+        margin-bottom: 3rem;
+    }
+}
+@media screen and (max-width:991px){
+    #intro img{
+        width: 75%;
+    }
+}
+
 
 #intro h2.lg-x {
     font-family: "Cinzel", serif;
@@ -401,7 +418,7 @@ body {
 #areas .left-align,
 #areas .right-align {
     position: relative;
-    margin-bottom: 250px;
+    margin-bottom: clamp(0px,25%,290px);
     text-align: center;
 }
 
@@ -775,40 +792,6 @@ footer p {
  * See http://animista.net/license for more info. 
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation fade-in-right
- * ----------------------------------------
- */
-.fade-in-right {
-    -webkit-animation: fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation: fade-in-right 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
-@-webkit-keyframes fade-in-right {
-    0% {
-        right: -70px;
-        opacity: 0;
-    }
-
-    100% {
-        right: 0;
-        opacity: 1;
-    }
-}
-
-@keyframes fade-in-right {
-    0% {
-        right: -70px;
-        opacity: 0;
-    }
-
-    100% {
-        right: 0;
-        opacity: 1;
-    }
-}
 
 /**
  * ----------------------------------------
