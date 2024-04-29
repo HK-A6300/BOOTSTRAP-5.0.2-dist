@@ -27,13 +27,126 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
   <title>nook&coffee</title>
   <style type="text/css">
-    .top-img{
-      min-height:300px; 
-      object-fit:cover;
+    .top-img {
+      min-height: 300px;
+      object-fit: cover;
     }
-     @media screen and (min-width: 1200px){
-      .top-img{
-        height:100vh;
+
+    @media screen and (min-width: 1200px) {
+      .top-img {
+        height: 100vh;
+      }
+    }
+
+    .menu-filter {
+      backdrop-filter: brightness(0.88) contrast(0.88);
+    }
+
+    .menu-caption {
+      top: 1.5vw;
+      left: 1.5vw;
+      width: 13%;
+    }
+
+    .menu-caption-sm {
+      display: none;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: clamp(23px, 4vw, 200000px);
+    }
+
+    .menu-caption-jp {
+      top: 1.5vw;
+      right: 1.5vw;
+      height: 2.7%;
+      width: unset;
+    }
+
+    .menu-caption-no {
+      bottom: 1.5vw;
+      right: 1.5vw;
+      height: 2vw;
+      width: unset;
+    }
+
+    .menu-arrow-box{
+      margin: auto;
+      bottom:15%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 15%;
+      opacity: 0;
+    }
+
+    .menu-arrow{
+      transform: translateY(50%);
+    }
+
+    .menu-animation::after {
+      content: '';
+      /*絶対配置で線の位置を決める*/
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      left: 0;
+      /*背景の形状*/
+      width: 0;
+      height: 100%;
+      background: #4FBABC;
+      /*アニメーションの指定*/
+      transition: all .35s;
+      opacity: 0;
+      /*はじめは透過0*/
+    }
+
+    .menu-animation:hover::after {
+      /*背景の形状*/
+      width: 100%;
+      /*横幅を伸ばす*/
+      opacity: 1;
+      /*不透明に*/
+    }
+    .menu-arrow{
+      transition: transform .5s;
+    }
+    .menu-caption-jp,.menu-caption-no,.menu-arrow-box{
+      transition: opacity .35s;
+    }
+    .menu-animation:hover .menu-caption-jp,.menu-animation:hover .menu-caption-no{
+      transition: all .35s;
+      opacity: 0;
+    }
+    .menu-animation:hover .menu-arrow-box{
+      opacity: 1;
+    }
+    .menu-animation:hover .menu-arrow{
+      transform: translateY(0);
+    }
+
+
+    @media screen and (max-width:991px) {
+
+      .menu-caption,
+      .menu-caption-jp {
+        display: none;
+      }
+
+      .menu-caption-sm {
+        display: block;
+      }
+
+      .menu-caption-no {
+        display: none;
+      }
+
+      .menu-arrow-box{
+        width: 5%;
+      }
+
+      .kagi-box-wh .row .col:nth-child(4) {
+        background-size: 130% !important;
+        background-position: 80% 38% !important;
       }
     }
   </style>
@@ -98,9 +211,13 @@
         <!--pc-->
         <img class="position-absolute bottom-0 end-0 md" style="width: 85%; pointer-events: none;"
           src="../img/spots/asago/nook-and-coffee/Vector.svg" alt="">
-        <div class="position-absolute top-0 end-0 d-flex md align-items-start justify-content-end" style="transform: translate(-3vw,2vw);">
-          <img style="width: 4vw; min-width: 36px; max-width:70px; pointer-events: none;" src="../img/spots/asago/nook-and-coffee/exp-2.svg" alt="">
-          <img style="width: 4vw; min-width: 36px; max-width:70px; margin-left:clamp(0px,1.5vw,25px); pointer-events: none;" src="../img/spots/asago/nook-and-coffee/exp-1.svg" alt="">
+        <div class="position-absolute top-0 end-0 d-flex md align-items-start justify-content-end"
+          style="transform: translate(-4vw,3vw);">
+          <img style="width: 3.2vw; min-width: 36px; max-width:57px; pointer-events: none;"
+            src="../img/spots/asago/nook-and-coffee/exp-2.svg" alt="">
+          <img
+            style="width: 3.2vw; min-width: 36px; max-width:57px; margin-left:clamp(0px,1.2vw,25px); pointer-events: none;"
+            src="../img/spots/asago/nook-and-coffee/exp-1.svg" alt="">
         </div>
         <img class="position-absolute top-50 start-0 md" style="
         transform: translateX(-50%)rotate(90deg)translateY(-125%);
@@ -132,7 +249,9 @@
       <div class="row pt-5 pb-5" id="xh" style="white-space: nowrap;">
         <div class="col-12 text-center">
           <p style="letter-spacing:0.5em; font-family: 'Noto Sans JP',sans-serif; font-size: 0.8em;">朝来市和田山町</p>
-          <h1 class="modern-en" style="font-weight:600; line-height:1.4; letter-spacing: 0.1em; font-size: clamp(20px,6vw,40px);">nook&coffee</h1>
+          <h1 class="modern-en"
+            style="font-weight:600; line-height:1.4; letter-spacing: 0.1em; font-size: clamp(20px,6vw,40px);">
+            nook&coffee</h1>
         </div>
       </div>
       <div class="row gx-lg-5 pb-5 gy-4">
@@ -143,7 +262,8 @@
           <h2 class="modern-L" style="letter-spacing: 0.3rem;"><span
               class="modern-S">ニュージーランド人の店主が作る</span><br>一味違ったランチが楽しめる！</h2>
           <p class="modern-S mt-3">
-            地元出身の奥様とニュージーランド出身のご主人の二人で経営しているカフェです。サンドイッチやなどのスイーツが主なメニューなのですが、中にはにんじんやスパイスが入った「キャロットケーキ」や スパイスが香る「チャイラテ」などの珍しいメニューもあります。特に「キャロットケーキ」はスイーツの中では上位に入るほどの人気だそうです。
+            地元出身の奥様とニュージーランド出身のご主人の二人で経営しているカフェです。サンドイッチやなどのスイーツが主なメニューなのですが、中にはにんじんやスパイスが入った「キャロットケーキ」や
+            スパイスが香る「チャイラテ」などの中々他のお店では食べられないような珍しいメニューもあります。特に「キャロットケーキ」はスイーツの中では上位に入るほどの人気だそうです。
           </p>
         </div>
       </div>
@@ -158,63 +278,83 @@
           <div class="position-relative d-inline-block">
             <h1 class="position-relative modern-L modern-enX"
               style="font-weight: 700; font-size:clamp(50px,4vw,110px); color: #FFFFFF; z-index: 2; letter-spacing: 0.15em;">
-              POIN<span style="letter-spacing: 0;">T</span></h1>
+              MEN<span style="letter-spacing: 0;">U</span></h1>
             <div class="position-absolute d-inline-block"
-              style="top:80%; left:50%; transform: translateX(-42%); background-color:#FFE355; height:5.5%; width: 20%; z-index: 1; margin-top: 3%;">
+              style="top:80%; left:50%; transform: translateX(-42%); background-color:#4FBABC; height:5.5%; width: 20%; z-index: 1; margin-top: 3%;">
             </div>
           </div>
         </div>
         <div class="col-12 kagi-box-wh" style="margin-top:3.2%;">
-          <div class="row row-cols-1 row-cols-lg-4 g-4">
-            <div class="col d-flex">
-              <div class="card position-relative kinosaki-points"
-                style="flex-grow:1; border-radius: 12px; border:#212529 2px solid; overflow: hidden;">
-                <a class="position-absolute" style="top: 0; left: 0; width: 100%; height: 100%;" href="#q-1"></a>
-                <img src="../img/spots/toyooka/kinosaki-burger/P1.jpg" alt="...">
-                <img src="../img/spots/toyooka/kinosaki-burger/P1n.svg" class="position-absolute"
-                  style="top:0; left:5%; width:23%;" alt="">
-                <div class="card-body">
-                  <h5 class="card-title"><span class="marker">但馬牛バーガー</span></h5>
-                  <p class="card-text">このお店の名物バーガー！パティに但馬牛の粗挽き肉100%を使用しています</p>
+          <div class="row row-cols-1 row-cols-lg-4 gx-0">
+            <div class="col position-relative"
+              style="height: 43vw; background-size: cover; background-position: 50% center; background-image: url(../img/spots/asago/nook-and-coffee/sandwich.jpg);">
+              <div class="menu-filter position-absolute w-100 h-100">
+                <div class="menu-animation position-relative w-100 h-100">
+                  <a class="position-absolute w-100 h-100" style="top:0;left:0;" href="#"></a>
+                  <img class="menu-caption position-absolute"
+                    src="../img/spots/asago/nook-and-coffee/sandwich.svg"></img>
+                  <img class="menu-caption-sm position-absolute"
+                    src="../img/spots/asago/nook-and-coffee/sandwich-sm.svg"></img>
+                  <img class="menu-caption-no position-absolute" src="../img/spots/asago/nook-and-coffee/01.svg"></img>
+                  <img class="menu-caption-jp position-absolute"
+                    src="../img/spots/asago/nook-and-coffee/sandwich-jp.svg"></img>
+                  <div class="position-absolute menu-arrow-box">
+                    <img class="menu-arrow" src="../img/spots/asago/nook-and-coffee/Arrow.svg" alt="">
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col d-flex">
-              <div class="card position-relative kinosaki-points"
-                style="flex-grow:1; border-radius: 12px; border:#212529 2px solid; overflow: hidden;">
-                <a class="position-absolute" style="top: 0; left: 0; width: 100%; height: 100%;" href="#q-2"></a>
-                <img src="../img/spots/toyooka/kinosaki-burger/P2.jpg" alt="...">
-                <img src="../img/spots/toyooka/kinosaki-burger/P2n.svg" class="position-absolute"
-                  style="top:0; left:5%; width:23%;" alt="">
-                <div class="card-body">
-                  <h5 class="card-title"><span class="marker">駅から徒歩数分</span></h5>
-                  <p class="card-text">駅前にお店があるのでアクセスが良く、お土産として買って帰るのにも丁度いいです</p>
+            <div class="col position-relative"
+              style="height: 43vw; background-size: cover; background-position: 50% center; background-image: url(../img/spots/asago/nook-and-coffee/rice-bowl.jpg);">
+              <div class="menu-filter position-absolute w-100 h-100">
+                <div class="menu-animation position-relative w-100 h-100">
+                  <a class="position-absolute w-100 h-100" style="top:0;left:0;" href="#"></a>
+                  <img class="menu-caption position-absolute"
+                    src="../img/spots/asago/nook-and-coffee/rice-bowl.svg"></img>
+                  <img class="menu-caption-sm position-absolute"
+                    src="../img/spots/asago/nook-and-coffee/rice-bowl-sm.svg"></img>
+                  <img class="menu-caption-no position-absolute" src="../img/spots/asago/nook-and-coffee/02.svg"></img>
+                  <img class="menu-caption-jp position-absolute"
+                    src="../img/spots/asago/nook-and-coffee/rice-bowl-jp.svg"></img>
+                    <div class="position-absolute menu-arrow-box">
+                      <img class="menu-arrow" src="../img/spots/asago/nook-and-coffee/Arrow.svg" alt="">
+                    </div>
                 </div>
               </div>
             </div>
-            <div class="col d-flex">
-              <div class="card position-relative kinosaki-points"
-                style="flex-grow:1; border-radius: 12px; border:#212529 2px solid; overflow: hidden;">
-                <a class="position-absolute" style="top: 0; left: 0; width: 100%; height: 100%;" href="#q-3"></a>
-                <img src="../img/spots/toyooka/kinosaki-burger/P3.jpg" alt="...">
-                <img src="../img/spots/toyooka/kinosaki-burger/P3n.svg" class="position-absolute"
-                  style="top:0; left:5%; width:23%;" alt="">
-                <div class="card-body">
-                  <h5 class="card-title"><span class="marker">オシャレな店内</span></h5>
-                  <p class="card-text">ゆとりのあるテーブル席、ソファー席でゆっくりとランチを楽しむことができます</p>
+            <div class="col position-relative"
+              style="height: 43vw; background-size: cover; background-position: 50% center; background-image: url(../img/spots/asago/nook-and-coffee/dessert.jpg);">
+              <div class="menu-filter position-absolute w-100 h-100">
+                <div class="menu-animation position-relative w-100 h-100">
+                  <a class="position-absolute w-100 h-100" style="top:0;left:0;" href="#"></a>
+                  <img class="menu-caption position-absolute"
+                    src="../img/spots/asago/nook-and-coffee/dessert.svg"></img>
+                  <img class="menu-caption-sm position-absolute"
+                    src="../img/spots/asago/nook-and-coffee/dessert-sm.svg"></img>
+                  <img class="menu-caption-no position-absolute" src="../img/spots/asago/nook-and-coffee/03.svg"></img>
+                  <img class="menu-caption-jp position-absolute"
+                    src="../img/spots/asago/nook-and-coffee/dessert-jp.svg"></img>
+                    <div class="position-absolute menu-arrow-box">
+                      <img class="menu-arrow" src="../img/spots/asago/nook-and-coffee/Arrow.svg" alt="">
+                    </div>
                 </div>
               </div>
             </div>
-            <div class="col d-flex">
-              <div class="card position-relative kinosaki-points"
-                style="flex-grow:1; border-radius: 12px; border:#212529 2px solid; overflow: hidden;">
-                <a class="position-absolute" style="top: 0; left: 0; width: 100%; height: 100%;" href="#q-4"></a>
-                <img src="../img/spots/toyooka/kinosaki-burger/P4.jpg" alt="...">
-                <img src="../img/spots/toyooka/kinosaki-burger/P4n.svg" class="position-absolute"
-                  style="top:0; left:5%; width:23%;" alt="">
-                <div class="card-body">
-                  <h5 class="card-title"><span class="marker">サイドメニューも充実</span></h5>
-                  <p class="card-text">ハンバーガーだけでなく、フライドポテトなどのサイドメニューも充実しています</p>
+            <div class="col position-relative"
+              style="height: 43vw; background-size: cover; background-position: 50% center; background-image: url(../img/spots/asago/nook-and-coffee/drink.jpg);">
+              <div class="menu-filter position-absolute w-100 h-100">
+                <div class="menu-animation position-relative w-100 h-100">
+                  <a class="position-absolute w-100 h-100" style="top:0;left:0;" href="#"></a>
+                  <img class="menu-caption position-absolute"
+                    src="../img/spots/asago/nook-and-coffee/drink.svg"></img>
+                  <img class="menu-caption-sm position-absolute"
+                    src="../img/spots/asago/nook-and-coffee/drink-sm.svg"></img>
+                  <img class="menu-caption-no position-absolute" src="../img/spots/asago/nook-and-coffee/04.svg"></img>
+                  <img class="menu-caption-jp position-absolute"
+                    src="../img/spots/asago/nook-and-coffee/drink-jp.svg"></img>
+                    <div class="position-absolute menu-arrow-box">
+                      <img class="menu-arrow" src="../img/spots/asago/nook-and-coffee/Arrow.svg" alt="">
+                    </div>
                 </div>
               </div>
             </div>
@@ -223,6 +363,7 @@
       </div>
     </div>
   </div>
+
   <div class="container mt-5 pb-5">
     <!--sm logo-->
     <div class="d-flex justify-content-center">

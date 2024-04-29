@@ -459,6 +459,7 @@ p {
     padding: 2em;
     position: relative;
     text-align: center;
+
 }
 
 .kagi-box-wh::before,
@@ -509,5 +510,14 @@ p {
     border-bottom: 5px solid #212529;
     bottom: 0;
     right: 0;
+}
+
+@media screen and (max-width:991px){
+    .kagi-box-bk,.kagi-box-wh{
+        padding: inherit;
+    }
+    .kagi-box-bk::after,.kagi-box-bk::before,.kagi-box-wh::after,.kagi-box-wh::before{
+        display: none;
+    }
 }
 
