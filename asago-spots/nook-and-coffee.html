@@ -19,20 +19,20 @@
   <link rel="stylesheet" href="../css/C-indv-spots.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Klee+One:wght@400;600&family=Shippori+Mincho+B1:wght@400;500;600;700&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Cinzel:wght@400;500;600;700;800;900&family=Ms+Madi&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="../js/modernizr-custom.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
   <title>nook&coffee</title>
   <style type="text/css">
-  
-    .top-img source,.top-img img {
+    .top-img source,
+    .top-img img {
       min-height: 300px;
       object-fit: cover;
     }
 
     @media screen and (min-width: 1200px) {
-      .top-img source,.top-img img {
+
+      .top-img source,
+      .top-img img {
         height: 100vh;
       }
     }
@@ -40,35 +40,48 @@
     .menu-filter {
       backdrop-filter: brightness(0.88) contrast(0.88);
     }
-    .menu-1,.menu-2,.menu-3,.menu-4{
-      height: clamp(0px,43vw,700px); 
-      background-size: cover; 
+
+    .menu-1,
+    .menu-2,
+    .menu-3,
+    .menu-4 {
+      height: clamp(0px, 43vw, 700px);
+      background-size: cover;
       background-position: 50% center;
     }
-    .webp .menu-1{
+
+    .webp .menu-1 {
       background-image: url(../img/spots/asago/nook-and-coffee/sandwich.webp);
     }
-    .no-webp .menu-1{
+
+    .no-webp .menu-1 {
       background-image: url(../img/spots/asago/nook-and-coffee/jpg/sandwich.jpg);
     }
-    .webp .menu-2{
+
+    .webp .menu-2 {
       background-image: url(../img/spots/asago/nook-and-coffee/rice-bowl.webp);
     }
-    .no-webp .menu-2{
+
+    .no-webp .menu-2 {
       background-image: url(../img/spots/asago/nook-and-coffee/jpg/rice-bowl.jpg);
     }
-    .webp .menu-3{
+
+    .webp .menu-3 {
       background-image: url(../img/spots/asago/nook-and-coffee/dessert.webp);
     }
-    .no-webp .menu-3{
+
+    .no-webp .menu-3 {
       background-image: url(../img/spots/asago/nook-and-coffee/jpg/dessert.jpg);
     }
-    .webp .menu-4{
+
+    .webp .menu-4 {
       background-image: url(../img/spots/asago/nook-and-coffee/drink.webp);
     }
-    .no-webp .menu-4{
+
+    .no-webp .menu-4 {
       background-image: url(../img/spots/asago/nook-and-coffee/jpg/drink.jpg);
     }
+
     .menu-caption {
       top: 1.5vw;
       left: 1.5vw;
@@ -317,10 +330,10 @@
       <div class="col-12 position-relative">
         <picture class="top-img">
           <source srcset="../img/spots/asago/nook-and-coffee/top.webp" type="image/webp">
-          <img src="../img/spots/asago/nook-and-coffee/jpg/top.jpg">
+          <img src="../img/spots/asago/nook-and-coffee/jpg/top.jpg" alt="ヌックアンドコーヒーのサンドイッチ">
         </picture>
         <!--pc-->
-        <img class="position-absolute bottom-0 end-0 md" style="width: 85%; pointer-events: none;" src="../img/spots/asago/nook-and-coffee/Vector.svg" alt="">
+        <img class="position-absolute bottom-0 end-0 md" style="width: 85%; pointer-events: none;" src="../img/spots/asago/nook-and-coffee/Vector.svg" loading="lazy" alt="nook&coffee">
         <div class="position-absolute top-0 end-0 d-flex md align-items-start justify-content-end" style="transform: translate(-4vw,3vw);">
           <img style="width: 3.2vw; min-width: 36px; max-width:57px; pointer-events: none;" src="../img/spots/asago/nook-and-coffee/exp-2.svg" alt="">
           <img style="width: 3.2vw; min-width: 36px; max-width:57px; margin-left:clamp(0px,1.2vw,25px); pointer-events: none;" src="../img/spots/asago/nook-and-coffee/exp-1.svg" alt="">
@@ -361,7 +374,7 @@
         <div class="col-lg-6">
           <picture>
             <source srcset="../img/spots/asago/nook-and-coffee/DSC02133.webp" type="image/webp">
-            <img src="../img/spots/asago/nook-and-coffee/jpg/DSC02133.jpg">
+            <img src="../img/spots/asago/nook-and-coffee/jpg/DSC02133.jpg" alt="キッシュ">
           </picture>
         </div>
         <div class="col-lg-6">
@@ -531,7 +544,7 @@
       $(window).on('load resize scroll', function () {
         var navH = $("#xh").offset();
         var menuH = menu.offset().top - menu.height() / 3;
-        var ScrollPos = $(window).scrollTop(); 
+        var ScrollPos = $(window).scrollTop();
         if (ScrollPos > menuH) {
           $('.menu-1,.menu-2,.menu-3,.menu-4,.kagi-box-wh').addClass("menu-move-on");
         }
