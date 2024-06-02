@@ -25,13 +25,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
   <title>nook&coffee</title>
   <style type="text/css">
-    .top-img {
+  
+    .top-img source,.top-img img {
       min-height: 300px;
       object-fit: cover;
     }
 
     @media screen and (min-width: 1200px) {
-      .top-img {
+      .top-img source,.top-img img {
         height: 100vh;
       }
     }
@@ -269,7 +270,7 @@
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZL73HVR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-light pt-3 pb-3 ps-3 pe-3 nav-float" id="nav">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-dark pt-3 pb-3 ps-3 pe-3 nav-float" id="nav">
     <div class="container-fluid">
       <p class="navbar-brand modern-en" href="#">nook&coffee</p>
       <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
@@ -370,7 +371,7 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid pt-5" id="menu" style="border-top: 1px solid #212529; border-bottom: 1px solid #212529; background-color: #212529;">
+  <div class="container-fluid pt-5" id="menu" style="border-top: 1px solid #212529; border-bottom: 1px solid #212529; background-color: #212529; overflow-x: hidden;">
     <div class="container">
       <div class="row pt-4 pb-4">
         <div class="col-12 text-center">
@@ -524,23 +525,23 @@
   <script type="text/javascript" src="../js/jQuery-3.7.0.js"></script>
   <script type="text/javascript">
     $(function () {
-      var navBox = $("#nav");
       var menu = $("#menu");
+      var navBox = $("#nav");
       navBox.hide();
       $(window).on('load resize scroll', function () {
         var navH = $("#xh").offset();
         var menuH = menu.offset().top - menu.height() / 3;
-        var ScrollPos = $(window).scrollTop();
+        var ScrollPos = $(window).scrollTop(); 
+        if (ScrollPos > menuH) {
+          $('.menu-1,.menu-2,.menu-3,.menu-4,.kagi-box-wh').addClass("menu-move-on");
+        }
+        else {
+        }
         if (ScrollPos > navH.top) {
           navBox.fadeIn();
         }
         else {
           navBox.fadeOut();
-        }
-        if (ScrollPos > menuH) {
-          $('.menu-1,.menu-2,.menu-3,.menu-4,.kagi-box-wh').addClass("menu-move-on");
-        }
-        else {
         }
       });
     });
