@@ -271,6 +271,12 @@
       transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1.25s !important;
     }
 
+    @media screen and (max-width :991px){
+      .menu-1,.menu-2,.menu-3,.menu-4{
+        transform: translateX(0);
+        transform:translateY(20%);
+      }
+    }
     .menu-move-on,
     .menu-move-on::before,
     .menu-move-on::after {
@@ -364,7 +370,7 @@
   </div>
   <div class="container-fluid" style="background-color: #4FBABC;">
     <div class="container">
-      <div class="row pt-5 pb-5" id="xh" style="white-space: nowrap;">
+      <div class="row pt-lg-5 pb-lg-5 pt-4 pb-4" id="xh" style="white-space: nowrap;">
         <div class="col-12 text-center">
           <p style="letter-spacing:0.5em; font-family: 'Noto Sans JP',sans-serif; font-size: 0.8em;">朝来市和田山町</p>
           <h1 class="modern-en" style="font-weight:600; line-height:1.4; letter-spacing: 0.1em; font-size: clamp(20px,6vw,40px);"> nook&coffee</h1>
@@ -384,9 +390,9 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid pt-5" id="menu" style="border-top: 1px solid #212529; border-bottom: 1px solid #212529; background-color: #212529; overflow-x: hidden;">
+  <div class="container-fluid pt-lg-5 pb-lg-5 pt-4 pb-4" id="menu" style="border-top: 1px solid #212529; border-bottom: 1px solid #212529; background-color: #212529; overflow-x: hidden;">
     <div class="container">
-      <div class="row pt-4 pb-4">
+      <div class="row">
         <div class="col-12 text-center">
           <div class="position-relative d-inline-block">
             <h1 class="position-relative modern-L modern-enX" style="font-weight: 700; font-size:clamp(50px,4vw,110px); color: #FFFFFF; z-index: 2; letter-spacing: 0.15em;"> MEN<span style="letter-spacing: 0;">U</span></h1>
@@ -394,7 +400,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 kagi-box-wh" style="margin-top:3.2%;">
+        <div class="col-12 kagi-box-wh" style="margin-top:clamp(0px,9%,60px);">
           <div class="row row-cols-1 row-cols-lg-4 gx-0 ">
             <div class="menu-1 col position-relative">
               <div class="menu-filter position-absolute w-100 h-100">
