@@ -120,7 +120,7 @@
     }
 
     .menu-arrow {
-      transform: translateY(50%);
+      transform: translateY(13px);
       transition: transform .5s;
     }
 
@@ -159,7 +159,7 @@
     .menu-description-anim {
       transition: all .35s;
       opacity: 0;
-      transform: translateY(100%);
+      transform: translateY(13px);
     }
 
     .menu-description-h2,
@@ -271,12 +271,17 @@
       transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1.25s !important;
     }
 
-    @media screen and (max-width :991px){
-      .menu-1,.menu-2,.menu-3,.menu-4{
+    @media screen and (max-width :991px) {
+
+      .menu-1,
+      .menu-2,
+      .menu-3,
+      .menu-4 {
         transform: translateX(0);
-        transform:translateY(20%);
+        transform: translateY(20%);
       }
     }
+
     .menu-move-on,
     .menu-move-on::before,
     .menu-move-on::after {
@@ -385,12 +390,12 @@
         </div>
         <div class="col-lg-6">
           <h2 class="modern-L" style="letter-spacing: 0.3rem;"><span class="modern-S">ニュージーランド人の店主が作る</span><br>一味違ったランチが楽しめる！</h2>
-          <p class="modern-S mt-3"> 地元出身の奥様とニュージーランド出身のご主人の二人で経営しているカフェです。創作サンドイッチが主なメニューなのですが、中にはにんじんやスパイスが入った「キャロットケーキ」や スパイス香る「チャイラテ」などの中々他のお店では食べられないような珍しいメニューもあります。また、子供スペースがあったりお子様向けのメニューが用意されていたりと子供連れの方も安心のお店です。 </p>
+          <p class="modern-S mt-3"> 地元出身の奥様とニュージーランド出身のご主人の二人で経営しているカフェです。創作サンドイッチが主なメニューなのですが、中にはにんじんのスパイスが入った「キャロットケーキ」などの珍しいメニューもあります。また、子供スペースがあったりお子様向けのメニューが用意されていたりと子供連れの方も安心のお店です。 </p>
         </div>
       </div>
     </div>
   </div>
-  <div class="container-fluid pt-lg-5 pb-lg-5 pt-4 pb-4" id="menu" style="border-top: 1px solid #212529; border-bottom: 1px solid #212529; background-color: #212529; overflow-x: hidden;">
+  <div class="container-fluid pt-lg-5 pb-lg-5 pt-4 pb-4" id="menu" style="border-top: 1px solid #212529; border-bottom: 1px solid #212529; background-color: #212529; overflow-x: hidden;overflow-y: hidden;">
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
@@ -487,6 +492,52 @@
       </div>
     </div>
   </div>
+  <div class="container-fluid pt-lg-5 pb-lg-5 pt-4 pb-4" id="menu" style="border-top: 1px solid #212529; border-bottom: 1px solid #212529; background-color: #212529; overflow-x: hidden;overflow-y: hidden;">
+    <div class="row">
+      <div class="col-6">
+        <picture>
+          <source srcset="../img/spots/asago/nook-and-coffee/sandwich.webp" type="image/webp">
+          <img src="../img/spots/asago/nook-and-coffee/jpg/sandwich.jpg" alt="" style="object-fit: cover; height:100%">
+        </picture>
+      </div>
+      <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+        <h1 style="color:white;">ｄさだ<br><br><br><br><br><br><br><br></h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <picture>
+          <source srcset="../img/spots/asago/nook-and-coffee/rice-bowl.webp" type="image/webp">
+          <img src="../img/spots/asago/nook-and-coffee/jpg/rice-bowl.jpg" alt="" style="object-fit: cover; height:100%">
+        </picture>
+      </div>
+      <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+        <h1 style="color:white;">ｄさだ</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <picture>
+          <source srcset="../img/spots/asago/nook-and-coffee/dessert.webp" type="image/webp">
+          <img src="../img/spots/asago/nook-and-coffee/jpg/dessert.jpg" alt="" style="object-fit: cover; height:100%">
+        </picture>
+      </div>
+      <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+        <h1 style="color:white;">ｄさだ</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <picture>
+          <source srcset="../img/spots/asago/nook-and-coffee/drink.webp" type="image/webp">
+          <img src="../img/spots/asago/nook-and-coffee/jpg/drink.jpg" alt="" style="object-fit: cover; height:100%">
+        </picture>
+      </div>
+      <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+        <h1 style="color:white;">ｄさだ</h1>
+      </div>
+    </div>
+  </div>
   <div class="container-fluid mt-5" style="background-color: #212529;">
     <div class="container text-white info info-modern pt-5 pb-5">
       <div class="row gy-5">
@@ -512,7 +563,7 @@
               <div class="ms-3">
                 <p>駐車場</p>
                 <div></div>
-                <h5>なし</h5>
+                <h5>あり</h5>
               </div>
             </div>
             <div class="col-12">
@@ -520,7 +571,7 @@
               <div class="ms-3">
                 <p>公式ホームページ</p>
                 <div></div>
-                <h5><a href="https://www.instagram.com/kinosakiburger/?hl=ja">こちらから</a></h5>
+                <h5><a href="https://www.facebook.com/nook.and.coffee.asago/?locale=ja_JP">こちらから</a></h5>
               </div>
             </div>
           </div>
