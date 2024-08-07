@@ -132,7 +132,7 @@
       bottom: 0;
       left: 0;
       /*背景の形状*/
-      width: 0;
+      width: 100%;
       height: 100%;
       background: #4FBABC;
       /*アニメーションの指定*/
@@ -142,65 +142,24 @@
     }
 
     .menu-animation:hover::after {
-      /*背景の形状*/
-      width: 100%;
-      /*横幅を伸ばす*/
       opacity: 1;
       /*不透明に*/
     }
 
-    .menu-description-posi {
-      transform: translateY(-50%);
-      top: 40%;
-      right: 1.5vw;
-      width: calc(87% - 4.5vw);
-    }
-
-    .menu-description-anim {
-      transition: all .35s;
-      opacity: 0;
-      transform: translateY(13px);
-    }
-
-    .menu-description-h2,
-    .menu-description-p {
-      text-align: left;
-      letter-spacing: 0.1em;
-    }
-
-    .menu-description-h2::after {
-      content: "";
-      display: block;
-      width: 25%;
-      background-color: #212529;
-      height: 2px;
-      margin-top: 14px;
-      margin-bottom: 5px;
-    }
-
-    .menu-description-p {
-      letter-spacing: 0.1em;
-      line-height: inherit;
-    }
-
-    .menu-caption-jp,
     .menu-caption-no,
     .menu-arrow-box {
       transition: opacity .35s;
     }
 
-    .menu-animation:hover .menu-caption-jp,
     .menu-animation:hover .menu-caption-no {
       opacity: 0;
     }
 
-    .menu-animation:hover .menu-arrow-box,
-    .menu-animation:hover .menu-description-anim {
+    .menu-animation:hover .menu-arrow-box {
       opacity: 1;
     }
 
-    .menu-animation:hover .menu-arrow,
-    .menu-animation:hover .menu-description-anim {
+    .menu-animation:hover .menu-arrow {
       transform: translateY(0);
     }
 
@@ -216,8 +175,7 @@
 
       .menu-caption,
       .menu-caption-jp,
-      .menu-caption-no,
-      .menu-description-posi {
+      .menu-caption-no {
         display: none;
       }
 
@@ -238,37 +196,37 @@
     .menu-1 {
       opacity: 0;
       transform: translateX(450%);
-      transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0s !important;
+      transition: all 0.9s cubic-bezier(0.215, 0.61, 0.355, 1) 0s !important;
     }
 
     .menu-2 {
       opacity: 0;
       transform: translateX(350%);
-      transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s !important;
+      transition: all 0.9s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s !important;
     }
 
     .menu-3 {
       opacity: 0;
       transform: translateX(250%);
-      transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s !important;
+      transition: all 0.9s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s !important;
     }
 
     .menu-4 {
       opacity: 0;
       transform: translateX(150%);
-      transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s !important;
+      transition: all 0.9s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s !important;
     }
 
     .kagi-box-wh::before {
       transform: translateX(-200%);
       opacity: 0;
-      transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1.25s !important;
+      transition: all 0.9s cubic-bezier(0.215, 0.61, 0.355, 1) 1s !important;
     }
 
     .kagi-box-wh::after {
       transform: translateX(200%);
       opacity: 0;
-      transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1) 1.25s !important;
+      transition: all 0.9s cubic-bezier(0.215, 0.61, 0.355, 1) 1s !important;
     }
 
     @media screen and (max-width :991px) {
@@ -289,14 +247,15 @@
       transform: translateX(0);
     }
 
-    .details-num{
-      margin: 0 0 clamp(10px,7%,60px) 15%;
-      font-family: 'Montserrat',sans-serif;
+    .details-num {
+      margin: 0 0 clamp(10px, 4%, 50px) 15%;
+      font-family: 'Montserrat', sans-serif;
       color: white;
       font-weight: 600;
       font-size: 50px;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.05em;
     }
+
     .details-title {
       margin: 0 0 0 15%;
       background-color: white;
@@ -306,53 +265,90 @@
       font-weight: 700;
       letter-spacing: 0.12em;
     }
-    .details-sub{
-      margin: 2% 0 0 15%;
+
+    .details-sub {
+      margin: 1% 0 0 15%;
       color: white;
       font-size: 20px;
       letter-spacing: 0.23em;
-      font-weight:500;
+      font-weight: 500;
     }
+
     .details-text {
-      margin: clamp(10px,7%,60px) 0 0 15%;
+      margin: clamp(10px, 4%, 60px) 0 0 15%;
       color: white;
       line-height: 3;
       max-width: 70%;
-      letter-spacing: 0.25em; 
+      letter-spacing: 0.25em;
       font-weight: 300;
     }
 
-    .details-img{
-      object-fit: cover; min-height: calc(95vw/2);
+    @media (max-width:991px) {
+      .details-text {
+        max-width: 85%;
+      }
+      .details-num,.details-text{
+        margin-left: 7.5%;
+      }
+      .details-title,.details-sub{
+        margin-left: 2%;
+      }
+      .details-num{
+        margin-bottom: 0;
+      }
+      .details-flex-responsive > div{
+        flex-grow: 1;
+      }
+      .d-flex:has(.details-flex-responsive){
+        padding:3% 0 3% 0;
+      }
     }
 
-    .details-img.last{
+    .details-img {
+      object-fit: cover;
+      min-height: calc(95vw/2);
+    }
+
+    .details-img.last {
       max-height: calc(95vw/2);
-      object-position:0 58%;
+      object-position: 0 58%;
     }
 
-    .details-orange{
+    @media (max-width:991px) {
+      .details-img.last {
+        object-position: 0 30%;
+      }
+    }
+
+    .details-orange {
       background-color: #EF6C00;
     }
-    .details-orange .details-title{
+
+    .details-orange .details-title {
       color: #EF6C00;
     }
-    .details-yellow{
+
+    .details-yellow {
       background-color: #FFA726;
     }
-    .details-yellow .details-title{
+
+    .details-yellow .details-title {
       color: #FFA726;
     }
-    .details-gray{
+
+    .details-gray {
       background-color: #B5C3C9;
     }
-    .details-gray .details-title{
+
+    .details-gray .details-title {
       color: #B5C3C9;
     }
-    .details-green{
+
+    .details-green {
       background-color: #26A69A;
     }
-    .details-green .details-title{
+
+    .details-green .details-title {
       color: #26A69A;
     }
   </style>
@@ -481,16 +477,10 @@
                   <img class="menu-caption-sm position-absolute" src="../img/spots/asago/nook-and-coffee/sandwich-sm.svg">
                   <img class="menu-caption-no position-absolute" src="../img/spots/asago/nook-and-coffee/01.svg">
                   <img class="menu-caption-jp position-absolute" src="../img/spots/asago/nook-and-coffee/sandwich-jp.svg">
-                  <div class="position-absolute menu-description-posi">
-                    <div class="menu-description-anim">
-                      <h3 class="menu-description-h2 mb-2">当店の看板メニュー</h3>
-                      <p class="menu-description-p">ニュージーランド出身のシェフが作る外国風のサンドウィッチをご賞味あれ！</p>
-                    </div>
-                  </div>
                   <div class="position-absolute menu-arrow-box">
                     <img class="menu-arrow" src="../img/spots/asago/nook-and-coffee/Arrow.svg" alt="">
                   </div>
-                  <a class="position-absolute w-100 h-100 z-3" style="top:0;left:0;" href="#"></a>
+                  <a class="position-absolute w-100 h-100 z-3" style="top:0;left:0;" href="#sandwich"></a>
                 </div>
               </div>
             </div>
@@ -501,16 +491,10 @@
                   <img class="menu-caption-sm position-absolute" src="../img/spots/asago/nook-and-coffee/rice-bowl-sm.svg">
                   <img class="menu-caption-no position-absolute" src="../img/spots/asago/nook-and-coffee/02.svg">
                   <img class="menu-caption-jp position-absolute" src="../img/spots/asago/nook-and-coffee/rice-bowl-jp.svg">
-                  <div class="position-absolute menu-description-posi">
-                    <div class="menu-description-anim">
-                      <h3 class="menu-description-h2 mb-2">密かに人気の丼物</h3>
-                      <p class="menu-description-p">サンドイッチだけでなく丼物も人気のメニューの一つです。</p>
-                    </div>
-                  </div>
                   <div class="position-absolute menu-arrow-box">
                     <img class="menu-arrow" src="../img/spots/asago/nook-and-coffee/Arrow.svg" alt="">
                   </div>
-                  <a class="position-absolute w-100 h-100 z-3" style="top:0;left:0;" href="#"></a>
+                  <a class="position-absolute w-100 h-100 z-3" style="top:0;left:0;" href="#rice-bowl"></a>
                 </div>
               </div>
             </div>
@@ -521,16 +505,10 @@
                   <img class="menu-caption-sm position-absolute" src="../img/spots/asago/nook-and-coffee/dessert-sm.svg">
                   <img class="menu-caption-no position-absolute" src="../img/spots/asago/nook-and-coffee/03.svg">
                   <img class="menu-caption-jp position-absolute" src="../img/spots/asago/nook-and-coffee/dessert-jp.svg">
-                  <div class="position-absolute menu-description-posi">
-                    <div class="menu-description-anim">
-                      <h3 class="menu-description-h2 mb-2">リピーター続出間違いなし！</h3>
-                      <p class="menu-description-p">隠し味に人参のスパイスが入った「キャロットケーキ」は当店の定番スイーツです。</p>
-                    </div>
-                  </div>
                   <div class="position-absolute menu-arrow-box">
                     <img class="menu-arrow" src="../img/spots/asago/nook-and-coffee/Arrow.svg" alt="">
                   </div>
-                  <a class="position-absolute w-100 h-100 z-3" style="top:0;left:0;" href="#"></a>
+                  <a class="position-absolute w-100 h-100 z-3" style="top:0;left:0;" href="#dessert"></a>
                 </div>
               </div>
             </div>
@@ -541,16 +519,10 @@
                   <img class="menu-caption-sm position-absolute" src="../img/spots/asago/nook-and-coffee/drink-sm.svg">
                   <img class="menu-caption-no position-absolute" src="../img/spots/asago/nook-and-coffee/04.svg">
                   <img class="menu-caption-jp position-absolute" src="../img/spots/asago/nook-and-coffee/drink-jp.svg">
-                  <div class="position-absolute menu-description-posi">
-                    <div class="menu-description-anim">
-                      <h3 class="menu-description-h2 mb-2">食事の後にほっと一息</h3>
-                      <p class="menu-description-p">コーヒーやカフェラテからソーダーやジュースまでと幅広いメニューがあります。</p>
-                    </div>
-                  </div>
                   <div class="position-absolute menu-arrow-box">
                     <img class="menu-arrow" src="../img/spots/asago/nook-and-coffee/Arrow.svg" alt="">
                   </div>
-                  <a class="position-absolute w-100 h-100 z-3" style="top:0;left:0;" href="#"></a>
+                  <a class="position-absolute w-100 h-100 z-3" style="top:0;left:0;" href="#drink"></a>
                 </div>
               </div>
             </div>
@@ -559,75 +531,83 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid pt-lg-5 pb-lg-5 pt-4 pb-4 px-0" id="menu" style="border-top: 1px solid #212529; border-bottom: 1px solid #212529; background-color: #212529; overflow-x: hidden;overflow-y: hidden;">
-    <div class="row details-orange">
-      <div class="col-6 px-0">
+  <div class="container-fluid pt-lg-5 pb-lg-5 pt-4 pb-4" id="menu" style="border-top: 1px solid #212529; border-bottom: 1px solid #212529; background-color: #212529; overflow-x: hidden;overflow-y: hidden;">
+    <div id="sandwich" class="row details-orange">
+      <div class="col-lg-6 px-0">
         <picture>
           <source srcset="../img/spots/asago/nook-and-coffee/sandwich.webp" type="image/webp">
           <img class="details-img" src="../img/spots/asago/nook-and-coffee/jpg/sandwich.jpg" alt="">
         </picture>
       </div>
-      <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+      <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center">
         <div class="d-flex flex-column justify-content-start">
-          <h4 class="details-num">01</h4>
-          <div>
-            <h1 class="modern-L details-title">当店の看板メニュー</h1>
+          <div class="details-flex-responsive">
+            <h4 class="details-num">01</h4>
+            <div>
+              <h1 class="modern-L details-title">当店の看板メニュー</h1>
+              <h2 class="details-sub">サンドウィッチ</h2>
+            </div>
           </div>
-          <h2 class="details-sub">サンドウィッチ</h2>
           <p class="details-text">ニュージーランド人シェフが作る創作サンドウィッチです。ローストビーフやサーモンポシェなど様々な種類があります。</p>
         </div>
       </div>
     </div>
-    <div class="row details-yellow flex-row-reverse">
-      <div class="col-6 px-0">
+    <div id="rice-bowl" class="row details-yellow flex-row-reverse">
+      <div class="col-lg-6 px-0">
         <picture>
           <source srcset="../img/spots/asago/nook-and-coffee/rice-bowl.webp" type="image/webp">
-          <img class="details-img" src="../img/spots/asago/nook-and-coffee/jpg/rice-bowl.jpg" alt="" >
+          <img class="details-img" src="../img/spots/asago/nook-and-coffee/jpg/rice-bowl.jpg" alt="">
         </picture>
       </div>
-      <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+      <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center">
         <div class="d-flex flex-column justify-content-start">
-          <h4 class="details-num">02</h4>
-          <div>
-            <h1 class="modern-L details-title">ちょっと和風なメニュー</h1>
+          <div class="details-flex-responsive">
+            <h4 class="details-num">02</h4>
+            <div>
+              <h1 class="modern-L details-title">ちょっと和風なメニュー</h1>
+              <h2 class="details-sub">ローストビーフ丼</h2>
+            </div>
           </div>
-          <h2 class="details-sub">ローストビーフ丼</h2>
           <p class="details-text">サンドウィッチのような洋風のメニューだけでなく和風のメニューも用意しています。メニューは「ローストビーフ丼」のみですが、サンドウィッチと並んで人気のメニューで満足度は折り紙付きです！ローストビーフをふんだんに使用し、野菜とピクルス、レンコンチップスを乗せています。山椒オイルもまたいいアクセントになっています。</p>
         </div>
       </div>
     </div>
-    <div class="row details-gray">
-      <div class="col-6 px-0">
+    <div id="dessert" class="row details-gray">
+      <div class="col-lg-6 px-0">
         <picture>
           <source srcset="../img/spots/asago/nook-and-coffee/dessert.webp" type="image/webp">
-          <img class="details-img" src="../img/spots/asago/nook-and-coffee/jpg/dessert.jpg" alt="" >
+          <img class="details-img" src="../img/spots/asago/nook-and-coffee/jpg/dessert.jpg" alt="">
         </picture>
       </div>
-      <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+      <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center">
         <div class="d-flex flex-column justify-content-start">
-          <h4 class="details-num">03</h4>
-          <div>
-            <h1 class="modern-L details-title">色とりどりのスイーツ</h1>
+          <div class="details-flex-responsive">
+            <h4 class="details-num">03</h4>
+            <div>
+              <h1 class="modern-L details-title">色とりどりのスイーツ</h1>
+              <h2 class="details-sub">デザート</h2>
+            </div>
           </div>
-          <h2 class="details-sub">デザート</h2>
           <p class="details-text">当店のデザートは他のお店では味わえないスイーツがたくさんあり、キャロットケーキはその代表例です。このスイーツは、にんじんをスパイスとして使ったニュージーランドで人気のケーキです。全スイーツメニューの中での人気も高く一度食べると病みつきになるというリピーターも多いんだとか。</p>
         </div>
       </div>
     </div>
-    <div class="row details-green flex-row-reverse">
-      <div class="col-6 px-0">
+    <div id="drink" class="row details-green flex-row-reverse">
+      <div class="col-lg-6 px-0">
         <picture>
           <source srcset="../img/spots/asago/nook-and-coffee/drink.webp" type="image/webp">
-          <img class="details-img last" src="../img/spots/asago/nook-and-coffee/jpg/drink.jpg" alt="" >
+          <img class="details-img last" src="../img/spots/asago/nook-and-coffee/jpg/drink.jpg" alt="">
         </picture>
       </div>
-      <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+      <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center">
         <div class="d-flex flex-column justify-content-start">
-          <h4 class="details-num">04</h4>
-          <div>
-            <h1 class="modern-L details-title">食後のあとに一息</h1>
+          <div class="details-flex-responsive">
+            <h4 class="details-num">04</h4>
+            <div>
+              <h1 class="modern-L details-title">食後のあとに一息</h1>
+              <h2 class="details-sub">ドリンク</h2>
+            </div>
           </div>
-          <h2 class="details-sub">ドリンク</h2>
           <p class="details-text">当店のデザートは他のお店では味わえないスイーツがたくさんあり、キャロットケーキはその代表例です。このスイーツは、にんじんをスパイスとして使ったニュージーランドで人気のケーキです。全スイーツメニューの中での人気も高く一度食べると病みつきになるというリピーターも多いんだとか。</p>
         </div>
       </div>
@@ -692,6 +672,7 @@
     $(function () {
       var menu = $("#menu");
       var navBox = $("#nav");
+      var details = $(".details-flex-responsive")
       navBox.hide();
       $(window).on('load resize scroll', function () {
         var navH = $("#xh").offset();
@@ -700,13 +681,20 @@
         if (ScrollPos > menuH) {
           $('.menu-1,.menu-2,.menu-3,.menu-4,.kagi-box-wh').addClass("menu-move-on");
         }
-        else {
-        }
         if (ScrollPos > navH.top) {
           navBox.fadeIn();
         }
         else {
           navBox.fadeOut();
+        }
+      });
+      $(window).on('load resize', function () {
+        var windowWidth = window.innerWidth;
+        if (windowWidth <= 991){
+          details.addClass("d-flex");
+        }
+        else{
+          details.removeClass("d-flex");
         }
       });
     });
