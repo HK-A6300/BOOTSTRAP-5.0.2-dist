@@ -299,7 +299,7 @@
       }
       .details-text{
         line-height: 2;
-        letter-spacing: 0.2;
+        letter-spacing: 0.2em;
       }
     }
     @media (max-width:991px) {
@@ -321,7 +321,8 @@
         flex-grow: 1;
       }
       .d-flex:has(.details-flex-responsive){
-        padding:4% 0 4% 0;
+        padding-top: 4%;
+        padding-bottom: 4%;
       }
     }
 
@@ -339,11 +340,15 @@
         text-align: center;
       }
       .details-flex-responsive > div{
-        padding-top: 25px;
         text-align: center;
       }
     }
-
+    @media screen and (max-width:575px){
+      .details-text{
+        max-width: 100%;
+        margin-left: 0;
+      }
+    }
     .details-img {
       object-fit: cover;
       min-height: calc(95vw/2);
@@ -498,7 +503,7 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid pt-lg-5 pb-lg-5 pt-4 pb-4" id="menu" style="border-top: 1px solid #212529; border-bottom: 1px solid #212529; background-color: #212529; overflow-x: hidden;overflow-y: hidden;">
+  <div class="container-fluid pt-lg-5 pb-lg-5 pt-4 pb-4" id="menu" style="background-color: #212529; overflow-x: hidden;overflow-y: hidden;">
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
@@ -571,7 +576,7 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid pt-lg-5 pb-lg-5 pt-4 pb-4" id="menu" style="border-top: 1px solid #212529; border-bottom: 1px solid #212529; background-color: #212529; overflow-x: hidden;overflow-y: hidden;">
+  <div class="container-fluid" style="overflow-x: hidden;overflow-y: hidden;">
     <div id="sandwich" class="row details-orange">
       <div class="col-lg-6 px-0">
         <picture>
@@ -657,7 +662,7 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid mt-5" style="background-color: #212529;">
+  <div class="container-fluid" style="background-color: #212529;">
     <div class="container text-white info info-modern pt-5 pb-5">
       <div class="row gy-5">
         <div class="col-lg-6">
@@ -670,14 +675,6 @@
           </div>
           <div class="row gy-4">
             <div class="col-12" style="padding-top: 1.5rem;">
-              <img src="../img/icon/yen-w.svg" alt="">
-              <div class="ms-3">
-                <p>料金</p>
-                <div></div>
-                <h5>1200~2500円</h5>
-              </div>
-            </div>
-            <div class="col-12">
               <img src="../img/icon/parking-w.svg" alt="">
               <div class="ms-3">
                 <p>駐車場</p>
@@ -701,7 +698,7 @@
             <h4>&thinsp;地図&nbsp;<span>Maps&nbsp;</span></h4><br>
           </div>
           <div class="col-12" style="flex-grow: 1;">
-            <iframe class="map-border w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.097268520289!2d134.8097888757852!3d35.625328522605265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fffc91116823309%3A0xb11a80f63b571b46!2sKinosaki%20Burger!5e0!3m2!1sja!2sjp!4v1704623901028!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            <iframe class="map-border w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104146.54139052845!2d134.74888406279186!3d35.3412642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fffe382780157df%3A0x60541988a88253c0!2snook%26coffee!5e0!3m2!1sja!2sjp!4v1723098581846!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
           </div>
         </div>

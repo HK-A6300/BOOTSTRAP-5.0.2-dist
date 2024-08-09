@@ -31,9 +31,6 @@ body {
     font-family: "Montserrat", sans-serif !important;
 }
 
-.cov-padding {
-    padding: 0 6.25vw;
-}
 
 .btn {
     border-radius: 2px;
@@ -133,15 +130,15 @@ body {
 
 .nav-element>div h1 {
     margin: 0 20px 5px 0;
-    letter-spacing: 0.2rem;
-    font-size: 1.65rem;
+    letter-spacing: 4px;
+    font-size: 23px;
 }
 
 .nav-element>div p {
     margin: 5px 20px 0 0;
-    letter-spacing: 0.1rem;
+    letter-spacing: 2px;
     line-height:1.7;
-    font-size: 0.85rem;
+    font-size: 13px;
     font-family: "Shippori Mincho B1", serif;
 }
 
