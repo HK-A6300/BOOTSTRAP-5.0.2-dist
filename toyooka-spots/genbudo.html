@@ -22,13 +22,63 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400&family=Shippori+Mincho+B1:wght@400;500;600;700&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&family=Cinzel:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <title>玄武洞公園</title>
   <style>
+    .content {
+      text-align: center;
+      padding-top: clamp(40px, 4vw, 1000px);
+      padding-bottom: clamp(40px, 4vw, 1000px);
+      color: #2D2D2D;
+    }
+
+    .text {
+      margin-top: clamp(30px, 3vw, 1000px);
+      font-family: 'Noto Serif JP';
+      line-height: 2.5;
+      letter-spacing: 0.4em;
+      font-size: 15px;
+    }
+
+    .section-display {
+      top: clamp(-10px, -1vw, -1000px);
+      left: 50px;
+      transform: rotate(90deg);
+      transform-origin: left center;
+    }
+
+    .section-display>div {
+      width: 120px;
+      height: 0.6px;
+      margin-right: 12px;
+      background-color: #2D2D2D;
+    }
+
+    .section-display>p {
+      letter-spacing: 0.5em;
+      line-height: 1.35;
+    }
+
+    #about .section-display>div {
+      background-color: #F5F5F5;
+    }
+
+    .formal-L {
+      letter-spacing: 0.5em;
+    }
+
+    @media screen and (max-width:991px) {
+      #about {
+        padding: 0 !important;
+      }
+      .row-cols-lg-2.row-cols-1 .col:nth-child(n+2){
+        margin-top: clamp(30px,3vw,1000px);
+      }
+    }
   </style>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZL73HVR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <nav id="nav" class="navbar navbar-expand-lg bg-body-tertiary navbar-dark pt-3 pb-3 ps-3 pe-3 formal_nav nav-float">
+  <nav id="nav" class="navbar navbar-expand-lg bg-body-tertiary navbar-light pt-3 pb-3 ps-3 pe-3 formal_nav nav-float">
     <div class="container-fluid">
       <p class="navbar-brand" href="#" style="font-family:'Shippori Mincho B1',serif; font-weight:600;">安国寺 <span style="font-family:'Cinzel',serif; font-weight:500; font-size:0.7em;">Ankokuji</span></p>
       <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
@@ -76,10 +126,87 @@
       <img src="../img/spots/toyooka/genbudou/jpg/1.jpg" alt="">
     </picture>
   </div>
-  <div id="xh" style="background-color: #F5F5F5;">
-    
+  <div id="xh" class="container-fluid position-relative content" style="background-color: #F5F5F5;">
+    <div class="position-absolute section-display d-flex align-items-center lg">
+      <div></div>
+      <p class="formal-en">STORY</p>
+    </div>
+    <img src="../img/spots/toyooka/genbudou/story1.svg" style="width: clamp(118px,8vw,10000px);" alt="">
+    <br>
+    <img src="../img/spots/toyooka/genbudou/story2.svg" style="margin-top: clamp(10px,1vw,1000px); width: clamp(280px,19vw,100000px);" alt="">
+    <p class="text"> 六角形の柱が無数に<br> 積み重なったような<br> 美しい景色が有名な玄武洞<br>
+      <br> 風の音や木々の囁きに耳を傾けながら<br> 数千万年の歴史を感じさせる風格に圧倒されます<br>
+      <br> 自然の壮大さを感じながら<br> 穏やかな一時を愉しめるでしょう
+    </p>
   </div>
-  <section style="background-color: black;">
+  <div id="about" class="position-relative container-fluid content" style="background-color: #8C8C8C; padding:0 100px 0 100px; color: #F5F5F5;">
+    <div class="position-absolute section-display d-flex align-items-center lg">
+      <div></div>
+      <p class="formal-en">ABOUT</p>
+    </div>
+    <picture>
+      <source srcset="../img/spots/toyooka/genbudou/2.webp">
+      <img src="../img/spots/toyooka/genbudou/img/2.jpg" alt="">
+    </picture>
+  </div>
+  <div class="container-fluid content" style="background-color: #8C8C8C; color: #F5F5F5;">
+    <h1 class="formal-L"><span class="formal-M">「</span>玄武岩<span class="formal-M">」<span style="font-size: 0.8em;">とは？</span></span></h1>
+    <p class="text"> 玄武岩は、溶岩が冷却する際に形成される<br> 特徴的な六角形の柱状節理を持っている岩石で、<br> 玄武洞の美しい景観を生み出しています。<br> また、地球磁場の研究でも重要な役割を果たしており、<br> 玄武岩によって過去の地球磁場の反転に関する<br>証拠が発見されています。 </p>
+    <h3 class="formal-M " style="margin-top: clamp(30px, 3vw, 1000px);">地球磁場の研究</h3>
+    <p class="text">玄武岩には地磁気の記録を保持する性質があります。<br> その性質を使い、松山基範博士が<br> 1926年に、玄武洞の玄武岩が<br> 現在とは逆向きの磁性を持つことを発見し、<br> 地磁気の逆転があったことが明らかになりました。 </p>
+    <img src="../img/spots/toyooka/genbudou/study.svg" style="margin-top: clamp(30px, 3vw, 1000px); max-width: 800px;" alt="">
+  </div>
+  <div class="container-fluid content position-relative">
+    <div class="position-absolute section-display d-flex align-items-center lg">
+      <div></div>
+      <p class="formal-en">CAVES</p>
+    </div>
+    <h1 class="formal-L">園内の洞窟</h1>
+    <p class="text">園内には古の神々にちなんだ名前がついた<br>様々な洞窟があります</p>
+    <div class="row row-cols-lg-2 row-cols-1 gx-lg-5 gy-lg-5" style="padding-top: clamp(30px, 3vw, 1000px); padding: 100px;">
+      <div class="col">
+        <picture>
+          <source srcset="../img/spots/toyooka/genbudou/No1.webp">
+          <img src="../img/spots/toyooka/genbudou/jpg/No1.jpg" alt="">
+        </picture>
+        <h1 class="formal-L" style="margin-top: clamp(30px,3vw,1000px);">玄武洞</h1>
+        <p class="text" style="margin:clamp(15px,1.5vw,1000px) 0 clamp(15px,1.5vw,1000px) 0;">
+          かつて採石場として人工的に作られた洞穴と残された柱が、ダイナミックな景観を形成しています。大正14年の北但大震災で大きく崩れましたが、その崩れた玄武岩は、地元の赤石集落の家の石垣や城崎温泉街を流れる大谿川の護岸などに利用されています。
+        </p>
+      </div>
+      <div class="col">
+        <picture>
+          <source srcset="../img/spots/toyooka/genbudou/No2.webp">
+          <img src="../img/spots/toyooka/genbudou/jpg/No2.jpg" alt="">
+        </picture>
+        <h1 class="formal-L" style="margin-top: clamp(30px,3vw,1000px);">青龍洞</h1>
+        <p class="text" style="margin:clamp(15px,1.5vw,1000px) 0 clamp(15px,1.5vw,1000px) 0;">
+          岩石に見られる規則正しい割れ目を節理といい、柱のようになったものを柱状節理と呼びます。玄武洞公園の青龍洞は特に美しい柱状節理が見られる場所です。この柱状節理は、熱い溶岩が冷却する過程で収縮して形成され、溶岩の表面から中心部に向かって伸びていきます。
+        </p>
+      </div>
+      <div class="col">
+        <picture>
+          <source srcset="../img/spots/toyooka/genbudou/No3.webp">
+          <img src="../img/spots/toyooka/genbudou/jpg/No3.jpg" alt="">
+        </picture>
+        <h1 class="formal-L" style="margin-top: clamp(30px,3vw,1000px);">白虎洞</h1>
+        <p class="text" style="margin:clamp(15px,1.5vw,1000px) 0 clamp(15px,1.5vw,1000px) 0;">
+          水平方向に延びた柱状節理の断面を見てみると、玄武洞の柱状節理よりも細いことがわかります。一般的に、柱状節理はゆっくり冷えた場合ほど太くなるため、この場所では溶岩が早く冷えたことを示しており、溶岩の周縁部に近いことがわかります
+        </p>
+      </div>
+      <div class="col">
+        <picture>
+          <source srcset="../img/spots/toyooka/genbudou/No4.webp">
+          <img src="../img/spots/toyooka/genbudou/jpg/No4.jpg" alt="">
+        </picture>
+        <h1 class="formal-L" style="margin-top: clamp(30px,3vw,1000px);">南朱雀洞<br class="xl-x"><span class="xl">&</span>北朱雀洞</h1>
+        <p class="text" style="margin:clamp(15px,1.5vw,1000px) 0 clamp(15px,1.5vw,1000px) 0;">
+          南朱雀洞では、溶岩流の先端部分が急に冷えて固まったため、節理が見られず、表面がごつごつしています。内部の熱い溶岩が押し出されて表面を破壊し、塊状の岩石が形成されます。また、岩石にはマグマのガスが抜けた穴が見られます。
+        </p>
+      </div>
+    </div>
+  </div>
+  <section style="background-color: #2D2D2D;">
     <div class="container pb-5 info mt-5">
       <div class="row gy-5 text-white info-formal">
         <div class="col-lg-6">
@@ -91,15 +218,7 @@
             <div class="info-div" style="background-color: white;"></div>
           </div>
           <div class="row gy-4">
-            <div class="col-12" style="padding-top: 1.5rem;">
-              <img src="../img/icon/schedule-w.svg" style="filter: none;" alt="">
-              <div class="ms-3">
-                <p>紅葉の見頃</p>
-                <div></div>
-                <h5>11月頃</h5>
-              </div>
-            </div>
-            <div class="col-12">
+            <div class="col-12"  style="padding-top: 1.5rem;">
               <img src="../img/icon/time-w.svg" style="filter: none;" alt="">
               <div class="ms-3">
                 <p>営業時間</p>
@@ -110,9 +229,9 @@
             <div class="col-12">
               <img src="../img/icon/yen-w.svg" style="filter: none;" alt="">
               <div class="ms-3">
-                <p>入館料</p>
+                <p>入園料</p>
                 <div></div>
-                <h5>¥500 (中学生以下は無料)</h5>
+                <h5>大人 ¥500　学生(大学生以下) ¥300</h5>
               </div>
             </div>
             <div class="col-12">
@@ -131,7 +250,7 @@
             <h4>&thinsp;地図&nbsp;<span>Maps&nbsp;</span></h4><br>
           </div>
           <div class="col-12" style="flex-grow: 1;">
-            <iframe class="map-border-w w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d415996.0484790244!2d134.43201745!3d35.45555869999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fffef2c9ce77ea3%3A0x8823d04bec397945!2z5a6J5Zu95a-6!5e0!3m2!1sja!2sjp!4v1699851873069!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            <iframe class="map-border-w w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3244.5895417810875!2d134.80248447578356!3d35.588521572617346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fffc62329a52f17%3A0x36cf957f11c7b27a!2z546E5q2m5rSe5YWs5ZyS!5e0!3m2!1sja!2sjp!4v1723264648697!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
           </div>
         </div>
