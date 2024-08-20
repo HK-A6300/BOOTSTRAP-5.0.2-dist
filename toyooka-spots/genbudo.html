@@ -72,6 +72,10 @@
         margin-top: clamp(30px,3vw,1000px);
       }
     }
+
+    .icon{
+      width: clamp(200px,25%,1000px);
+    }
   </style>
 </head>
 <body>
@@ -123,17 +127,18 @@
   <div class="container-fluid px-0 position-relative">
     <picture>
       <source srcset="../img/spots/toyooka/genbudou/1.webp">
-      <img src="../img/spots/toyooka/genbudou/jpg/1.jpg" alt="">
+      <img style="filter: brightness(0.8) contrast(0.85); min-height: 400px; object-fit: cover;" src="../img/spots/toyooka/genbudou/jpg/1.jpg" alt="">
     </picture>
+    <img class="position-absolute icon" src="../img/spots/toyooka/genbudou/icon.svg" alt="" style="top: 50%;left: 50%; transform: translate(-50%,-50%);">
   </div>
   <div id="xh" class="container-fluid position-relative content" style="background-color: #F5F5F5;">
     <div class="position-absolute section-display d-flex align-items-center lg">
       <div></div>
       <p class="formal-en">STORY</p>
     </div>
-    <img src="../img/spots/toyooka/genbudou/story1.svg" style="width: clamp(118px,8vw,10000px);" alt="">
+    <img src="../img/spots/toyooka/genbudou/story1.svg" style="width: clamp(118px,9vw,10000px);" alt="">
     <br>
-    <img src="../img/spots/toyooka/genbudou/story2.svg" style="margin-top: clamp(10px,1vw,1000px); width: clamp(280px,19vw,100000px);" alt="">
+    <img src="../img/spots/toyooka/genbudou/story2.svg" style="margin-top: clamp(10px,2vw,1000px); width: clamp(280px,19vw,100000px);" alt="">
     <p class="text"> 六角形の柱が無数に<br> 積み重なったような<br> 美しい景色が有名な玄武洞<br>
       <br> 風の音や木々の囁きに耳を傾けながら<br> 数千万年の歴史を感じさせる風格に圧倒されます<br>
       <br> 自然の壮大さを感じながら<br> 穏やかな一時を愉しめるでしょう
