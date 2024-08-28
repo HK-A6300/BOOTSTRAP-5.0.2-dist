@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="jp">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-PZL73HVR');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Bootstrap CSS -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/C-indv-spots.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <title>JUANA</title>
+  <style type="text/css">
+    @font-face {
+      font-family: 'Shippori Gochic';
+      src: url(../fonts/ShipporiGothicB2-Bold.ttf);
+    }
+
+    @font-face {
+      font-family: 'Shippori Gochic OTF';
+      src: url(../fonts/ShipporiGothicB2-OTF-Bold.otf);
+    }
+
+    .contents picture img {
+      border-radius: 3vw;
+    }
+
+    .contents h1,
+    .contents h2,
+    .contents p,
+    .top-scroll h1,
+    .top-scroll p {
+      font-family: "Shippori Gochic", sans-serif;
+    }
+
+    .contents .container-fluid:nth-child(1) {
+      padding-top: clamp(40px, 6vw, 123px);
+    }
+
+    .contents .container-fluid:last-child {
+      padding-bottom: clamp(40px, 6vw, 123px);
+    }
+
+    @media screen and (max-width:991px) {
+      .contents .container .row:nth-child(1) img {
+        aspect-ratio: 19/12;
+        object-fit: cover;
+      }
+    }
+
+    .contents .container .row:nth-child(2) .col {
+      text-align: right;
+    }
+
+    .contents .container-fluid:nth-child(even) .container .row:nth-child(2) .col {
+      text-align: left;
+    }
+
+    .contents .container-fluid .container .row:nth-child(2) img {
+      max-height: 70%;
+      width: auto;
+      padding-right: 5vw;
+      transform: translateY(20%);
+    }
+
+    .contents .container-fluid:nth-child(even) .container .row:nth-child(2) img {
+      max-height: 70%;
+      width: auto;
+      padding-right: unset;
+      padding-left: 5vw;
+      transform: translateY(20%);
+    }
+
+    .contents h1 {
+      left: 4vw;
+      bottom: 0;
+      transform: translate(0, 50%);
+      padding: 1rem 2rem;
+      border-radius: 3vw;
+      letter-spacing: 0.5em;
+    }
+
+    .contents .container-fluid:nth-child(even) h1 {
+      left: unset;
+      right: 4vw;
+    }
+
+    @media screen and (max-width:991px) {
+      .contents h2 {
+        left: 50%;
+        bottom: 0;
+        padding: 0.4rem 0.8rem;
+        transform: translate(-50%, 50%);
+        text-align: center;
+        border-radius: 3vw;
+        letter-spacing: 0.4em;
+        z-index: 2;
+        white-space: nowrap;
+      }
+    }
+
+    .contents p {
+      position: relative;
+      margin-left: calc(4vw + 2rem);
+      margin-top: calc(1.375rem + 1.8vw);
+      z-index: 2;
+      line-height: 2.3;
+      letter-spacing: 0.3em;
+    }
+
+    .contents .container-fluid:nth-child(even) p {
+      margin-left: unset;
+      margin-right: calc(4vw + 2rem);
+      text-align: right;
+    }
+
+    @media screen and (max-width:991px) {
+      .contents p {
+        text-align: center !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+    }
+
+    .contents .container-fluid {
+      margin-bottom: calc((1.47rem + 1.3vw)*1.5);
+    }
+
+    .contents .container-fluid:after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      height: calc((1.47rem + 1.3vw)*1.5);
+    }
+
+    .contents .container-fluid:nth-child(1):after {
+      background: linear-gradient(rgba(255, 244, 227, 1) 0%, rgba(255, 244, 227, 1) 33%, rgba(255, 253, 224, 1) 100%);
+    }
+
+    .contents .container-fluid:nth-child(2):after {
+      background: linear-gradient(#FFFDE0 0%, #FFFDE0 33%, #F8F7F4 100%);
+    }
+
+    .contents .container-fluid:nth-child(3):after {
+      display: none;
+    }
+
+    .contents .container-fluid:nth-child(3) {
+      margin-bottom: unset;
+    }
+
+    @media screen and (max-width:575px) {
+      .contents br {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZL73HVR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-dark pt-3 pb-3 ps-3 pe-3 nav-float" id="nav">
+    <div class="container-fluid">
+      <p class="navbar-brand modern-en" href="#">竹田城跡</p>
+      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#Navber" aria-controls="Navber" aria-expanded="false" aria-label="ナビゲーションの切替">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="Navber">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../index.html">ホーム</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"> 目的で探す </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">食事</a></li>
+              <li><a class="dropdown-item" href="#">観光</a></li>
+              <li><a class="dropdown-item" href="#">遊び</a></li>
+              <li><a class="dropdown-item" href="#">宿泊</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">全て</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false"> 地域で探す </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="../toyooka-spots.html">豊岡</a></li>
+              <li><a class="dropdown-item" href="../asago-spots.html">朝来</a></li>
+              <li><a class="dropdown-item" href="../yabu-spots.html">養父</a></li>
+              <li><a class="dropdown-item" href="../shinonsen-spots.html">新温泉町</a></li>
+              <li><a class="dropdown-item" href="../kami-spots.html">香美町</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="../all-spots.html">全て</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <div class="container-fluid px-0">
+    <div id="caption_lg" style="height: 200vh;">
+      <picture>
+        <source srcset="../img/spots/asago/juana/top.webp" type="image/webp">
+        <img class="vh-100" src="../img/spots/asago/juana/jpg/top.jpg" alt="JUANAのパスタ" style="position: sticky; top: 0; object-fit: cover;">
+      </picture>
+      <div class="top-scroll position-absolute w-100" style="top: 0;">
+        <div class="position-relative" style="height: 100vh; ">
+          <img class="position-absolute" style="top: 50%; left: 25%; width: 30%; transform: translate(-50%,-50%);" src="../img/spots/asago/juana/icon.svg" alt="">
+        </div>
+        <div class="position-relative" style="height: 100vh; ">
+          <div class="position-absolute" style="top: 50%; left: 25%; transform: translate(-50%,-50%);color: white;">
+            <h1 style="letter-spacing: 0.45em; line-height: 1.6;">地元野菜たっぷり<br>日替わりランチ</h1>
+            <p style="line-height: 2.3;letter-spacing: 0.3em; margin-top: 2vw;">兵庫県朝来市に佇む小さなカフェ。<br> 地元野菜をたっぷり使った日替わりランチと、<br> 手作りのパンが心を温めてくれます。<br> 美味しいランチと木の温もり感じる心地よい空間に<br> あなたもきっと虜になる事間違いなし！ </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="caption_sm">
+      <picture>
+        <source srcset="../img/spots/asago/juana/top-sm.webp" type="image/webp">
+        <img id="top" src="../img/spots/asago/juana/jpg/top-sm.jpg" alt="JUANAのパスタ">
+      </picture>
+    </div>
+  </div>
+  <div id="xh" class="contents">
+    <div class="container-fluid position-relative px-0" style="background-color: #FFF4E3; color: #383531;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 position-relative">
+            <picture>
+              <source srcset="../img/spots/asago/juana/1.webp" type="image/webp">
+              <img src="../img/spots/asago/juana/jpg/1.jpg" alt="JUANAのパスタ">
+            </picture>
+            <h1 class="position-absolute d-none d-lg-block" style="background-color:#FFF4E3;">きまぐれランチ</h1>
+            <h2 class="position-absolute d-lg-none" style="background-color:#FFF4E3;">きまぐれランチ</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-auto px-lg-0">
+            <p>名前の通りその日によってメニューがバラバラです<br> チキンカツのような食べ応えのあるものから<br> パスタなどの洋風なものまで本当に色々あります<br> ですが、どのメニューも美味しく味は折り紙付きです！</p>
+          </div>
+          <div class="col px-0 d-none d-lg-block">
+            <img style="max-width: 100%; height: auto;" src="../img/spots/asago/juana/1illust.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid position-relative px-0 " style="background-color: #FFFDE0; color: #383831;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 position-relative">
+            <picture>
+              <source srcset="../img/spots/asago/juana/2.webp" type="image/webp">
+              <img src="../img/spots/asago/juana/jpg/2.jpg" alt="JUANAの野菜スープ">
+            </picture>
+            <h1 class="position-absolute d-none d-lg-block" style="background-color:#FFFDE0;">野菜スープ</h1>
+            <h2 class="position-absolute d-lg-none" style="background-color:#FFFDE0;">野菜スープ</h2>
+          </div>
+        </div>
+        <div class="row justify-content-lg-end justify-content-center">
+          <div class="order-2 col-auto px-lg-0">
+            <p>どのランチメニューに含まれている、私のお気に入りの一品です<br> 野菜は日替わりで様々ですが、どのスープもほんのりとした<br> 野菜の風味が感じられ、とても優しい味わいです<br> お好みで岩塩などの色々な種類の塩をかける事もでき<br> 自分だけの味にアレンジできます</p>
+          </div>
+          <div class="order-1 col px-0 d-none d-lg-block">
+            <img src="../img/spots/asago/juana/2illust.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid position-relative px-0" style="background-color: #F8F7F4; color: #313638;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 position-relative">
+            <picture>
+              <source srcset="../img/spots/asago/juana/3.webp" type="image/webp">
+              <img src="../img/spots/asago/juana/jpg/3.jpg" alt="JUANAのごはんランチ">
+            </picture>
+            <h1 class="position-absolute d-none d-lg-block" style="background-color:#F8F7F4;">ごはんランチ</h1>
+            <h2 class="position-absolute d-lg-none" style="background-color:#F8F7F4;">ごはんランチ</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-auto px-0">
+            <p>ごはん物のランチメニューです<br> アジア風味の少し海外テイストの物から<br> 鶏つくね丼のようなあっさりとしたものまで...<br> こちらも毎日メニューが変わるので要チェックです！</p>
+          </div>
+          <div class="col px-0 d-none d-lg-block">
+            <img src="../img/spots/asago/juana/3illust.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid" style="background-color: #212529;">
+    <div class="container text-white info info-modern pt-5 pb-5">
+      <div class="row gy-5">
+        <div class="col-lg-6">
+          <div class="col info-title" style="padding:0.7rem;">
+            <img src="../img/icon/info-w.svg">
+            <h4>&thinsp;基本情報&nbsp;<span>Information&nbsp;</span></h4><br>
+          </div>
+          <div class="col-12">
+            <div class="info-div" style="background-color: white;"></div>
+          </div>
+          <div class="row gy-4">
+            <div class="col-12" style="padding-top: 1.5rem;">
+              <img src="../img/icon/parking-w.svg" alt="">
+              <div class="ms-3">
+                <p>駐車場</p>
+                <div></div>
+                <h5>あり</h5>
+              </div>
+            </div>
+            <div class="col-12">
+              <img src="../img/icon/site-w.svg" alt="">
+              <div class="ms-3">
+                <p>公式ホームページ</p>
+                <div></div>
+                <h5><a href="https://www.instagram.com/cafe_juana/">こちらから</a></h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="col-12 info-title info-modern" style="padding:0.7rem;">
+            <img src="../img/icon/maps-w.svg" alt="">
+            <h4>&thinsp;地図&nbsp;<span>Maps&nbsp;</span></h4><br>
+          </div>
+          <div class="col-12" style="flex-grow: 1;">
+            <iframe class="map-border w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3256.30535723644!2d134.87774327577065!3d35.298393372713264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3555576e03964277%3A0x874a90a1c4d268b1!2sJUANA!5e0!3m2!1sja!2sjp!4v1724138097320!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Optional JavaScript; choose one of the two! -->
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="../js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="../js/jQuery-3.7.0.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      var windowH = $(window).height();
+      var windowW = $(window).width();
+      var captionLG = $("#caption_lg");
+      var captionSM = $("#caption_sm");
+      if (windowW / windowH < 1.41 || windowW / windowH > 2.22) {
+        captionLG.css('display', 'none');
+        captionSM.css('display', 'block');
+      }
+      else {
+        captionLG.css('display', 'block');
+        captionSM.css('display', 'none');
+      }
+      $(window).resize(function () {
+        var windowH = $(window).height();
+        var windowW = $(window).width();
+        if (windowW / windowH < 1.41 || windowW / windowH > 2.22) {
+          captionLG.css('display', 'none');
+          captionSM.css('display', 'block');
+        }
+        else {
+          captionLG.css('display', 'block');
+          captionSM.css('display', 'none');
+        }
+      });
+    });
+    $(function () {
+      var navBox = $("#nav");
+      navBox.hide();
+      $(window).on('load resize scroll', function () {
+        var navH = $("#xh").offset();
+        var ScrollPos = $(window).scrollTop();
+        if (ScrollPos > navH.top) {
+          navBox.fadeIn();
+        }
+        else {
+          navBox.fadeOut();
+        }
+      });
+    });
+  </script>
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+</html>
