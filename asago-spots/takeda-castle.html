@@ -210,12 +210,7 @@
           <img class="position-absolute" style="top: 50%; left: 50%; height: 55%; transform: translate(-50%,-50%);" src="../img/spots/asago/takeda-castle/story.svg" alt="">
         </div>
       </div>
-      <div id="caption_sm">
-        <picture>
-          <source srcset="../img/spots/asago/takeda-castle/top-sm.webp" type="image/webp">
-          <img id="top" src="../img/spots/asago/takeda-castle/jpg/top-sm.jpg" alt="takeda-castleのパスタ">
-        </picture>
-      </div>
+
     </div>
     <div id="xh" class="contents" style="background-color: #373737; color: white;">
       <div class="container-fluid position-relative px-0">
@@ -259,7 +254,7 @@
         </div>
       </div>
     </div>
-    <div class="contents-2" style="background-color: #373737; color: white;">
+    <div class="contents-2" style="background-color: #373737; color: white; overflow-x: hidden;">
       <div class="container" style="letter-spacing: 0.4em; text-align: center; padding: calc((1.47rem + 1.3vw)* 1.5);">
         <h1 class="d-none d-lg-block">雲海を見るポイント</h1>
         <h2 class="d-lg-none">雲海を見るポイント</h2>
@@ -354,32 +349,6 @@
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="../js/jQuery-3.7.0.js"></script>
     <script type="text/javascript">
-      $(function () {
-        var windowH = $(window).height();
-        var windowW = $(window).width();
-        var captionLG = $("#caption_lg");
-        var captionSM = $("#caption_sm");
-        if (windowW / windowH < 1.41 || windowW / windowH > 2.22) {
-          captionLG.css('display', 'none');
-          captionSM.css('display', 'block');
-        }
-        else {
-          captionLG.css('display', 'block');
-          captionSM.css('display', 'none');
-        }
-        $(window).resize(function () {
-          var windowH = $(window).height();
-          var windowW = $(window).width();
-          if (windowW / windowH < 1.41 || windowW / windowH > 2.22) {
-            captionLG.css('display', 'none');
-            captionSM.css('display', 'block');
-          }
-          else {
-            captionLG.css('display', 'block');
-            captionSM.css('display', 'none');
-          }
-        });
-      });
       $(function () {
         var navBox = $("#nav");
         navBox.hide();
