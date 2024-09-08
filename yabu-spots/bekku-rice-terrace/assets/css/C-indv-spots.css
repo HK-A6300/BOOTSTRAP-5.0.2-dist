@@ -1,0 +1,264 @@
+body {
+    font-family: "inter", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic UI", "Yu Gothic", "Meiryo", sans-serif;
+}
+
+.bootstrap p {
+    margin: 0;
+    line-height: 2;
+    letter-spacing: 0.1rem;
+    font-size: 0.9rem;
+}
+.navbar-brand,.nav-link{
+    letter-spacing: 0.1em;
+}
+.formal-jp {
+    font-family: "Shippori Mincho B1", serif !important;
+}
+
+.formal-en {
+    font-family: "Cinzel", serif !important;
+}
+
+.modern-jp {
+    font-family: "Noto Sans JP", sans-serif !important;
+}
+
+.modern-en {
+    font-family: "Inter", sans-serif !important;
+}
+
+.modern-enX {
+    font-family: "Montserrat", sans-serif !important;
+}
+
+.container-fluid .container .col-5 {
+    position: relative;
+}
+
+.title h1 {
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    margin: 0;
+}
+
+.title p {
+    letter-spacing: 2px;
+    color: gray;
+    font-weight: 400;
+}
+
+/*@media screen and (min-width: 1200px){
+    .container-fluid h1{
+        letter-spacing: 0.3rem;
+    }
+}*/
+@media screen and (max-width: 575px) {
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none;
+    }
+}
+
+.formal-L {
+    /*h1 please*/
+    font-family: "Shippori Minocho B1", serif;
+    font-weight: 500;
+    letter-spacing: 0.24em;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.formal-M {
+    /*h2 or h3 please*/
+    font-family: "Shippori Minocho B1", serif;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    /*永楽館のえｘｐ1に合わせてます。*/
+    line-height: 1.7;
+}
+
+.formal-S {
+    /*p please*/
+    font-family: "Noto Serif JP", serif;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    line-height: 2.5;
+    font-size: 0.9rem;
+    /*0.87*/
+}
+
+.modern-L {
+    /*h1 please*/
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    line-height: 1.7;
+}
+
+.modern-M {
+    /*h3 please*/
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    line-height: 1.7;
+}
+
+.modern-S {
+    /*p please*/
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    line-height: 2.3;
+    font-size: 0.92rem;
+}
+
+.info-title {
+    /*col*/
+    display: flex !important;
+    align-items: center !important;
+}
+
+.info-title img {
+    height: calc(2.2rem + 1.3vw) !important;
+    width: calc(2.2rem + 1.3vw) !important;
+    transform: translate(0, 5%) !important;
+}
+
+.info-title h4 {
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 600 !important;
+    letter-spacing: 0.3rem !important;
+    white-space: nowrap !important;
+}
+
+.info-title span {
+    font-family: "Inter", sans-serif;
+    line-height: 1 !important;
+    font-size: 0.8rem !important;
+    font-weight: 500 !important;
+    vertical-align: middle !important;
+    letter-spacing: 0.2rem !important;
+}
+
+.info-div {
+    width: 100% !important;
+    height: 1px !important;
+    background-color: #212529;
+}
+
+.info .col-12 {
+    display: flex;
+    align-items: flex-end;
+}
+
+.info img {
+    width: 45px;
+    height: 45px;
+    transform: translate(8%, 0);
+}
+
+.info a {
+    text-decoration: none;
+}
+
+.info-formal h4,
+.info-formal span {
+    font-family: "Shippori Mincho B1", serif;
+}
+
+.info-formal h5,
+.info-formal p {
+    font-family: "Noto Serif JP", serif;
+}
+
+.info-modern h4 {
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+.info-modern span {
+    font-family: "Inter", sans-serif;
+}
+
+.info-modern h5,
+p {
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+.map-border {
+    border: 1px solid #212529;
+    min-height: 340px;
+}
+.map-border-w {
+    border: 1px solid #FFFFFF;
+    min-height: 340px;
+}
+
+@media screen and (max-width:991px) {
+    .map-border,.map-border-w {
+        min-height: 400px;
+    }
+}
+
+.formal-title h1,
+.formal-title h6 {
+    font-family: "Noto Serif JP", serif !important;
+}
+
+@media screen and (max-width:991px) {
+    .formal-style-responsive {
+        text-align: center !important;
+    }
+
+    .formal-style-responsive br {
+        display: none;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .formal-style-responsive_2 {
+        flex-direction: column-reverse;
+    }
+}
+
+.formal_nav .dropdown-item,
+.formal_nav .dropdown-menu,
+.formal_nav .nav-link,
+.formal_nav .navbar-brand {
+    font-family: "Noto Serif JP", serif;
+}
+
+.nav-float {
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    width: 100%;
+}
+
+.kannabe-border {
+    border-bottom: 1px solid #212529;
+    border-left: 1px solid #212529;
+    border-right: 1px solid #212529;
+}
+
+@media screen and (min-width:991px) {
+    .carousel-lg {
+        object-fit: cover;
+        height: 100vh;
+    }
+}
+
+.ms-3 h5{
+    letter-spacing: 0.1rem!important;
+    font-weight: 500!important;
+    line-height: 1.2!important;
+    font-size: 1.25rem!important;
+}
+
+.infos{
+    margin: 0;
+    line-height: 2;
+    letter-spacing: 0.1rem;
+    font-size: 0.9rem;
+}
