@@ -2244,7 +2244,7 @@ input, select, textarea {
 /* Intro */
 
 	#intro {
-		background: url("images/overlay.png"), url("../../../../img/spots/yabu/bekku-rice-terrace/intro.jpg");
+		background: url("images/overlay.png"), url("https://lh3.googleusercontent.com/d/1oXH5CdP6eFwsg7AFg-q4jzcDt3BHGhbF");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
@@ -2254,7 +2254,7 @@ input, select, textarea {
 /* One */
 
 	#one {
-		background: url("images/overlay.png"), url("../../../../img/spots/yabu/bekku-rice-terrace/one.jpg");
+		background: url("images/overlay.png"), url("https://lh3.googleusercontent.com/d/1hIgOJmpx5RJLZdT-RzcP3QhlQnC2Asjo");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
@@ -2263,7 +2263,7 @@ input, select, textarea {
 /* Two */
 
 	#two {
-		background: url("images/overlay.png"), url("../../../../img/spots/yabu/bekku-rice-terrace/two.jpg");
+		background: url("images/overlay.png"), url("https://lh3.googleusercontent.com/d/17NqMlpCv-1J51Nuxcx1z4YTStWSoB43N");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
