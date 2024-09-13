@@ -1,5 +1,4 @@
 {
-    "editor.fontSize": 20,
-    "editor.mouseWheelScrollSensitivity": 4,
-    "livePreview.defaultPreviewPath": "/shinonsen-spots/shiwagara-waterfall.html"
+    "editor.fontSize": 14,
+    "editor.mouseWheelScrollSensitivity": 2
 }
