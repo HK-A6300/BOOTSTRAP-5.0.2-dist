@@ -129,6 +129,6 @@ rt {
     height: 100vh;
 }
 
-.container-fluid .row .col-lg-6:nth-child(1){
+/*.container-fluid .row .col-lg-6:nth-child(1){
     z-index: -1;
-}
+}*/
